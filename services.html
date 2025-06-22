@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kore Web Dynamics | Services | Software Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container mx-auto flex items-center justify-between px-4 py-2">
+            <a href="index.html" class="logo" aria-label="Go to Kore Web Dynamics homepage">
+                <img src="images/black-transparent.png" alt="Kore Web Dynamics Logo" class="h-16">
+            </a>
+            <div class="hamburger md:hidden" id="hamburger" aria-expanded="false" aria-controls="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu md:flex space-x-6 hidden" id="menu" role="menubar">
+                <li class="menu-item" role="menuitem">
+                    <a href="index.html" class="menu-link" aria-label="Home page">Home</a>
+                    <ul class="submenu" role="menu">
+                        <li role="none"><a href="#hero" class="submenu-link" role="menuitem">Welcome</a></li>
+                        <li role="none"><a href="#services" class="submenu-link" role="menuitem">Overview</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item" role="menuitem">
+                    <a href="services.html" class="menu-link" aria-label="Services page">Services</a>
+                    <ul class="submenu" role="menu">
+                        <li role="none"><a href="services.html#web" class="submenu-link" role="menuitem">Web Development</a></li>
+                        <li role="none"><a href="services.html#app" class="submenu-link" role="menuitem">App Development</a></li>
+                        <li role="none"><a href="services.html#seo" class="submenu-link" role="menuitem">SEO & Marketing</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item" role="menuitem">
+                    <a href="templates.html" class="menu-link" aria-label="Templates page">Templates</a>
+                    <ul class="submenu" role="menu">
+                        <li role="none"><a href="templates.html#business" class="submenu-link" role="menuitem">Business</a></li>
+                        <li role="none"><a href="templates.html#portfolio" class="submenu-link" role="menuitem">Portfolio</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item" role="menuitem">
+                    <a href="about.html" class="menu-link" aria-label="About page">About</a>
+                    <ul class="submenu" role="menu">
+                        <li role="none"><a href="about.html#mission" class="submenu-link" role="menuitem">Our Mission</a></li>
+                        <li role="none"><a href="about.html#team" class="submenu-link" role="menuitem">Our Team</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item" role="menuitem">
+                    <a href="contact.html" class="menu-link" aria-label="Contact page">Contact</a>
+                    <ul class="submenu" role="menu">
+                        <li role="none"><a href="contact.html#form" class="submenu-link" role="menuitem">Get in Touch</a></li>
+                        <li role="none"><a href="contact.html#support" class="submenu-link" role="menuitem">Support</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="search-bar flex items-center">
+                <input type="text" id="search-input" placeholder="Search..." class="search-input hidden md:block" aria-label="Search website">
+                <button id="search-toggle" class="search-icon" aria-label="Toggle search bar">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<footer class="bg-blue-900 text-white py-6" role="contentinfo">
+    <div class="container mx-auto px-4 text-center">
+        <p>© 2025 Kore Web Dynamics. Springfield, Missouri.</p>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://linkedin.com" class="hover:text-blue-300" aria-label="Visit our LinkedIn page">LinkedIn</a>
+            <a href="https://instagram.com" class="hover:text-blue-300" aria-label="Visit our Facebook page">Facebook</a>
+        </div>
+    </div>
+</footer>
+    
+</body>
+</html>
