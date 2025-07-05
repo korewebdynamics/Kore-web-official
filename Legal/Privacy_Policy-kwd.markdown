@@ -92,7 +92,7 @@ I may update this Privacy Policy from time to time to reflect changes in my prac
 If you have questions or concerns about this Privacy Policy or my data practices, please contact me at:
 
 Kore Web Dynamics LLC\
-korewebdynamics@gmail.com\
+admin@korewebdynamics.com\
 (417)599-9612
 
 ---

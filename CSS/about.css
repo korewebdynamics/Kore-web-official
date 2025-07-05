@@ -1,0 +1,109 @@
+/* General styles for the about page */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9fafb;
+    min-height: calc(100vh - 200px);
+}
+
+/* Mission Section */
+#mission {
+    background: linear-gradient(135deg, #e5e7eb 0%, #f9fafb 100%);
+    padding: 5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+#mission .mission-content {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#mission h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #1e40af;
+}
+
+#mission p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #374151;
+}
+
+#mission a {
+    color: #1e40af;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#mission a:hover {
+    color: #3b82f6;
+}
+
+#mission .contact-button {
+    display: block;
+    background-color: #1e40af;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    margin: 2rem auto 0;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mission .contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide-in Animation */
+.mission-content {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.mission-content.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #mission {
+        padding: 3rem 1rem;
+    }
+
+    #mission h2 {
+        font-size: 2rem;
+    }
+
+    #mission p {
+        font-size: 1.125rem;
+    }
+
+    #mission .contact-button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+        max-width: 180px;
+    }
+}

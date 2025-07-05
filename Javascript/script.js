@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const searchToggle = document.getElementById('search-toggle');
     const searchInput = document.getElementById('search-input');
-    const navbar = document.querySelector('.navbar'); // Reference to navbar
+    const navbar = document.querySelector('.navbar');
     let scene, camera, renderer, starGeo1, starGeo2, starGeo3, stars1, stars2, stars3;
     let velocities1, velocities2, velocities3, accelerations;
 
@@ -47,37 +47,86 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateNavbarColor() {
         const scrollPosition = window.scrollY;
         const heroSection = document.getElementById('hero');
-        const servicesSection = document.querySelector('.py-12'); // Services section
+        const introSection = document.getElementById('intro-animation');
+        const servicesSection = document.getElementById('Main');
+        const mainImage = document.querySelector('.main-image');
+        const hostSection = document.getElementById('host');
 
-        if (heroSection && servicesSection) {
+        // Check if on services.html
+        if (window.location.pathname.includes('services.html')) {
+            const mainImageTop = mainImage ? mainImage.getBoundingClientRect().top + scrollPosition : 0;
+            const mainImageBottom = mainImage ? mainImageTop + mainImage.offsetHeight : 0;
+            const hostTop = hostSection ? hostSection.getBoundingClientRect().top + scrollPosition : Infinity;
+
+            if (scrollPosition < mainImageTop) {
+                // Top of page: Light text
+                navbar.classList.remove('navbar-dark-text');
+            } else if (scrollPosition >= mainImageTop && scrollPosition < hostTop) {
+                // Over main-image: Dark text
+                navbar.classList.add('navbar-dark-text');
+            } else if (scrollPosition >= hostTop) {
+                // Over #host and beyond: Light text
+                navbar.classList.remove('navbar-dark-text');
+            }
+        } 
+        // Original logic for index.html
+        else if (heroSection && introSection && servicesSection) {
             const heroTop = heroSection.getBoundingClientRect().top + scrollPosition;
             const heroBottom = heroTop + heroSection.offsetHeight;
+            const introTop = introSection.getBoundingClientRect().top + scrollPosition;
+            const introBottom = introTop + introSection.offsetHeight;
             const servicesTop = servicesSection.getBoundingClientRect().top + scrollPosition;
+            const servicesBottom = servicesTop + servicesSection.offsetHeight;
 
-            // Initial 100px white area
             if (scrollPosition < 100) {
-                navbar.classList.remove('navbar-dark-text'); // Dark text for white area
-            }
-            // Over hero section (dark background)
-            else if (scrollPosition >= heroTop && scrollPosition < heroBottom) {
-                navbar.classList.add('navbar-dark-text'); // White text for dark background
-            }
-            // Over services section (white background)
-            else if (scrollPosition >= servicesTop) {
-                navbar.classList.remove('navbar-dark-text'); // Dark text for white area
+                navbar.classList.remove('navbar-dark-text');
+            } else if (scrollPosition >= heroTop && scrollPosition < heroBottom) {
+                navbar.classList.add('navbar-dark-text');
+            } else if (scrollPosition >= introTop && scrollPosition < introBottom) {
+                navbar.classList.add('navbar-dark-text');
+            } else if (scrollPosition >= servicesTop && scrollPosition < servicesBottom) {
+                navbar.classList.remove('navbar-dark-text');
             }
         }
     }
 
-    window.addEventListener('scroll', updateNavbarColor);
-    window.addEventListener('resize', updateNavbarColor); // Handle resize
-    updateNavbarColor(); // Initial call
+    // Typewriter Effect
+    const typewriter = document.getElementById('typewriter');
+    if (typewriter) {
+        const text = 'ONE STOP SHOP FOR WEBSITE DEVELOPMENT AND MAINTENANCE';
+        let index = 0;
 
-    // Three.js Initialization
-    function init() {
+        function type() {
+            if (index < text.length) {
+                typewriter.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            } else {
+                typewriter.style.animation = 'blink 0.7s step-end infinite';
+            }
+        }
+        type();
+    }
+
+    // Intersection Observer for Slide Animation
+    const slideCards = document.querySelectorAll('.slide-card, .plan-card');
+    if (slideCards.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const animation = entry.target.getAttribute('data-animation');
+                    entry.target.classList.add(animation, 'visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        slideCards.forEach(card => observer.observe(card));
+    }
+
+    // Three.js Starfield for Homepage
+    function initStarfield() {
         const canvas = document.getElementById('three-canvas');
         if (!canvas) {
-            console.error('Canvas element with ID "three-canvas" not found');
             return;
         }
 
@@ -134,12 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        animate();
+        animateStarfield();
     }
 
-    function animate() {
+    function animateStarfield() {
         if (!stars1 || !stars2 || !stars3 || !starGeo1.attributes.position) {
-            console.error('Stars or geometry not properly initialized');
             return;
         }
 
@@ -178,8 +226,14 @@ document.addEventListener('DOMContentLoaded', () => {
         stars3.rotation.y += 0.002;
 
         renderer.render(scene, camera);
-        requestAnimationFrame(animate);
+        requestAnimationFrame(animateStarfield);
     }
 
-    init();
+    if (window.location.pathname.includes('index.html') || !window.location.pathname.includes('services.html')) {
+        initStarfield();
+    }
+
+    window.addEventListener('scroll', updateNavbarColor);
+    window.addEventListener('resize', updateNavbarColor);
+    updateNavbarColor();
 });

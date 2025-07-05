@@ -8,6 +8,7 @@
     <title>Kore Web Dynamics - Software Solutions for Small Businesses</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon_io/favicon.ico">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,15 +32,17 @@
                         <a href="index.html" class="menu-link" aria-label="Home page">Home</a>
                         <ul class="submenu" role="menu">
                             <li role="none"><a href="#hero" class="submenu-link" role="menuitem">Welcome</a></li>
-                            <li role="none"><a href="#services" class="submenu-link" role="menuitem">Overview</a></li>
+                            <li role="none"><a href="#Main" class="submenu-link" role="menuitem">Overview</a></li>
                         </ul>
                     </li>
                     <li class="menu-item" role="menuitem">
                         <a href="services.html" class="menu-link" aria-label="Services page">Services</a>
                         <ul class="submenu" role="menu">
+                            <li role="none"><a href="services.html#host" class="submenu-link" role="menuitem">Hosting Plans</a></li>
                             <li role="none"><a href="services.html#web" class="submenu-link" role="menuitem">Web Development</a></li>
                             <li role="none"><a href="services.html#app" class="submenu-link" role="menuitem">App Development</a></li>
                             <li role="none"><a href="services.html#seo" class="submenu-link" role="menuitem">SEO & Marketing</a></li>
+                            
                         </ul>
                     </li>
                     <li class="menu-item" role="menuitem">
@@ -54,6 +57,7 @@
                         <ul class="submenu" role="menu">
                             <li role="none"><a href="about.html#mission" class="submenu-link" role="menuitem">Our Mission</a></li>
                             <li role="none"><a href="about.html#team" class="submenu-link" role="menuitem">Our Team</a></li>
+                            <li role="none"><a href="policy.html" class="submenu-link" role="menuitem">Privacy Policy</a></li>
                         </ul>
                     </li>
                     <li class="menu-item" role="menuitem">
@@ -89,21 +93,44 @@
             </div>
         </section>
 
+        <section id="intro-animation" class="py-12 bg-gray-900 text-white" aria-labelledby="intro-title">
+            <div class="container mx-auto px-4 text-center">
+                <h2 id="intro-title" class="text-3xl md:text-4xl font-bold mb-8">
+                    <span id="typewriter" class="inline-block"></span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="slide-card" style="--slide-delay: 0s;">
+                        <img src="images/code-1076536_640.jpg" alt="Web Development" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500">
+                    </div>
+                    <div class="slide-card" style="--slide-delay: 0.2s;">
+                        <img src="images/mobile-devices-2017980_640.png" alt="App Development" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500">
+                    </div>
+                    <div class="slide-card" style="--slide-delay: 0.4s;">
+                        <img src="images/web-design-3411373_640.jpg" alt="SEO and Marketing" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+        </section>
+
+       
+
         
-        <section class="py-12 bg-white" aria-labelledby="services-title">
+        <section class="py-12 bg-white" aria-labelledby="services-title" id="Main">
             <div class="container mx-auto px-4">
                 <h2 id="services-title" class="text-3xl font-bold text-center mb-8">Our Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                        <h3 class="text-xl font-semibold mb-2"><img src="images/captive_portal_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Website Developement">Web Development
+                        </h3>
                         <p>Custom websites with coding, wordpress and many other tools tailored for all size businesses and budgets. *AI features and mobile app development offered.</p>
                     </div>
                     <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2">Hosting Plans</h3>
+                        <h3 class="text-xl font-semibold mb-2"><img src="images/database_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Database Icon">Hosting Plan</h3>
                         <p>Easy transfer - Daily Security Checks - Cpanel Access - SSL - Monthly Maintenance Plans</p>
                     </div>
                     <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2">SEO & Marketing</h3>
+                        <h3 class="text-xl font-semibold mb-2"><img src="images/web_traffic_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Website traffic icon">SEO & Marketing</h3>
                         <p>Boost your online presence with SEO, advertisements or social media management.</p>
                     </div>
                 </div>
@@ -115,15 +142,27 @@
 
         
         <section aria-label="Scrolling items showcase">
+            <h2 id="item-description" class="text-3xl font-bold text-center mb-8">Website Building Skills</h2>
+           
             <div class="wrapper">
-                <div class="item item1" aria-hidden="true">Wordpress</div>
-                <div class="item item2" aria-hidden="true"><img src='images/React_logo_PNG_(11).png' alt="React.js Logo"></div>
-                <div class="item item3" aria-hidden="true"><img src="images\JavaScript_logo_PNG_(1).png" alt="Javascript logo"></div>
-                <div class="item item4" aria-hidden="true"><img src="images\new-php-logo.png" alt="PHP logo"></div>
-                <div class="item item5" aria-hidden="true"><img src="images\HTML5_logo_and_wordmark.svg" alt="HTML 5 logo"></div>
-                <div class="item item6" aria-hidden="true"><img src="images\CSS3_Logo.PNG.png" alt="CSS Logo"></div>
-                <div class="item item7" aria-hidden="true">Google Tools</div>
-                <div class="item item8" aria-hidden="true"><img src="images\Python (1).png" alt="Python logo"></div>
+                <div class="item item1" aria-hidden="true"><img src="images/WordPress-logotype-alternative.png" alt="wordpress official logo"></div>
+                <div class="item item2" aria-hidden="true"><img src='images/React-icon.svg' alt="React.js Logo"></div>
+                <div class="item item3" aria-hidden="true"><img src="images/JavaScript-logo.png" alt="Javascript logo"></div>
+                <div class="item item4" aria-hidden="true"><img src="images/new-php-logo.svg" alt="PHP logo"></div>
+                <div class="item item5" aria-hidden="true"><img src="images/HTML5_logo_and_wordmark.svg" alt="HTML 5 logo"></div>
+                <div class="item item6" aria-hidden="true"><img src="images/CSS3_logo_and_wordmark.svg" alt="CSS Logo"></div>
+                <div class="item item7" aria-hidden="true"><img src="images/Google_2015_logo.svg.png" alt="Google logo, not affiliated or partnered with, just familiar with thier features"></div>
+                <div class="item item8 items" aria-hidden="true"><img src="images/Canva_Logo.svg.png" alt="Python logo"></div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-gray-900 text-white" aria-labelledby="pricing-title">
+            <div class="container mx-auto px-4 text-center">
+                <h2 id="pricing-title" class="text-4xl md:text-5xl font-bold mb-6">BIG IDEAS, LOW BUDGET - NO PROBLEM</h2>
+                <p class="text-lg md:text-xl mb-6">We offer hourly rates for our clients that need a little work done here and there on a big website or job. Pay as work is completed.</p>
+                <div class="text-center mt-8">
+                    <a href="services.html" class="text-blue-400 hover:underline text-lg" aria-label="View pricing plans and options">See Services for more details on pricing plans and options</a>
+                </div>
             </div>
         </section>
     </main>
@@ -131,6 +170,22 @@
     
     <div class="chatbot" onclick="openChatbot()" aria-label="Open chatbot for assistance">Chat with Us!</div>
 
+       <div id="chatbot-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" aria-hidden="true">
+        <div class="bg-white rounded-lg w-full max-w-md p-6 relative max-h-[80vh] overflow-y-auto">
+            <button onclick="closeChatbot()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" aria-label="Close chatbot">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Website Cost Estimator</h2>
+            <div id="chatbot-messages" class="mb-4"></div>
+            <div class="flex">
+                <input type="text" id="chatbot-input" class="flex-1 border rounded-l-lg p-2" placeholder="Type your message..." aria-label="Chatbot input">
+               28:12 PM 6/28/2025
+                <button onclick="sendMessage()" class="bg-blue-600 text-white rounded-r-lg px-4 py-2 hover:bg-blue-700" aria-label="Send message">Send</button>
+            </div>
+        </div>
+    </div>
     
     <footer class="bg-blue-900 text-white py-6" role="contentinfo">
         <div class="container mx-auto px-4 text-center">
@@ -138,6 +193,7 @@
             <div class="flex justify-center space-x-4 mt-4">
                 <a href="https://linkedin.com" class="hover:text-blue-300" aria-label="Visit our LinkedIn page">LinkedIn</a>
                 <a href="https://instagram.com" class="hover:text-blue-300" aria-label="Visit our Facebook page">Facebook</a>
+                <a href="policy.html" class="footer-link" aria-label="View our Privacy Policy">Privacy Policy</a>
             </div>
         </div>
     </footer>

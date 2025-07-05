@@ -3,86 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kore Web Dynamics | Services | Software Development</title>
+    <meta name="description" content="Kore Web Dynamics - Affordable hosting plans, web development, app development, and SEO services for small businesses in Springfield, Missouri.">
+    <meta name="keywords" content="web hosting, software development, web design, Springfield Missouri, small business, SEO, app development">
+    <title>Kore Web Dynamics - Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon_io/favicon.ico">
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/services.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <header>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container mx-auto flex items-center justify-between px-4 py-2">
-            <a href="index.html" class="logo" aria-label="Go to Kore Web Dynamics homepage">
-                <img src="images/black-transparent.png" alt="Kore Web Dynamics Logo" class="h-16">
-            </a>
-            <div class="hamburger md:hidden" id="hamburger" aria-expanded="false" aria-controls="menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container mx-auto flex items-center justify-between px-4 py-2">
+                <a href="index.html" class="logo" aria-label="Go to Kore Web Dynamics homepage">
+                    <img src="images/black-transparent.png" alt="Kore Web Dynamics Logo" class="h-16">
+                </a>
+                <div class="hamburger md:hidden" id="hamburger" aria-expanded="false" aria-controls="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu md:flex space-x-6 hidden" id="menu" role="menubar">
+                    <li class="menu-item" role="menuitem">
+                        <a href="index.html" class="menu-link" aria-label="Home page">Home</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="index.html#hero" class="submenu-link" role="menuitem">Welcome</a></li>
+                            <li role="none"><a href="index.html#Main" class="submenu-link" role="menuitem">Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="services.html" class="menu-link" aria-label="Services page">Services</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="services.html#web" class="submenu-link" role="menuitem">Web Development</a></li>
+                            <li role="none"><a href="services.html#app" class="submenu-link" role="menuitem">App Development</a></li>
+                            <li role="none"><a href="services.html#seo" class="submenu-link" role="menuitem">SEO & Marketing</a></li>
+                            <li role="none"><a href="services.html#host" class="submenu-link" role="menuitem">Hosting Plans</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="templates.html" class="menu-link" aria-label="Templates page">Templates</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="templates.html#business" class="submenu-link" role="menuitem">Business</a></li>
+                            <li role="none"><a href="templates.html#portfolio" class="submenu-link" role="menuitem">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="about.html" class="menu-link" aria-label="About page">About</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="about.html#mission" class="submenu-link" role="menuitem">Our Mission</a></li>
+                            <li role="none"><a href="about.html#team" class="submenu-link" role="menuitem">Our Team</a></li>
+                            <li role="none"><a href="policy.html" class="submenu-link" role="menuitem">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="contact.html" class="menu-link" aria-label="Contact page">Contact</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="contact.html#form" class="submenu-link" role="menuitem">Get in Touch</a></li>
+                            <li role="none"><a href="contact.html#support" class="submenu-link" role="menuitem">Support</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search-bar flex items-center">
+                    <input type="text" id="search-input" placeholder="Search..." class="search-input hidden md:block" aria-label="Search website">
+                    <button id="search-toggle" class="search-icon" aria-label="Toggle search bar">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <ul class="menu md:flex space-x-6 hidden" id="menu" role="menubar">
-                <li class="menu-item" role="menuitem">
-                    <a href="index.html" class="menu-link" aria-label="Home page">Home</a>
-                    <ul class="submenu" role="menu">
-                        <li role="none"><a href="#hero" class="submenu-link" role="menuitem">Welcome</a></li>
-                        <li role="none"><a href="#services" class="submenu-link" role="menuitem">Overview</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item" role="menuitem">
-                    <a href="services.html" class="menu-link" aria-label="Services page">Services</a>
-                    <ul class="submenu" role="menu">
-                        <li role="none"><a href="services.html#web" class="submenu-link" role="menuitem">Web Development</a></li>
-                        <li role="none"><a href="services.html#app" class="submenu-link" role="menuitem">App Development</a></li>
-                        <li role="none"><a href="services.html#seo" class="submenu-link" role="menuitem">SEO & Marketing</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item" role="menuitem">
-                    <a href="templates.html" class="menu-link" aria-label="Templates page">Templates</a>
-                    <ul class="submenu" role="menu">
-                        <li role="none"><a href="templates.html#business" class="submenu-link" role="menuitem">Business</a></li>
-                        <li role="none"><a href="templates.html#portfolio" class="submenu-link" role="menuitem">Portfolio</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item" role="menuitem">
-                    <a href="about.html" class="menu-link" aria-label="About page">About</a>
-                    <ul class="submenu" role="menu">
-                        <li role="none"><a href="about.html#mission" class="submenu-link" role="menuitem">Our Mission</a></li>
-                        <li role="none"><a href="about.html#team" class="submenu-link" role="menuitem">Our Team</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item" role="menuitem">
-                    <a href="contact.html" class="menu-link" aria-label="Contact page">Contact</a>
-                    <ul class="submenu" role="menu">
-                        <li role="none"><a href="contact.html#form" class="submenu-link" role="menuitem">Get in Touch</a></li>
-                        <li role="none"><a href="contact.html#support" class="submenu-link" role="menuitem">Support</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="search-bar flex items-center">
-                <input type="text" id="search-input" placeholder="Search..." class="search-input hidden md:block" aria-label="Search website">
-                <button id="search-toggle" class="search-icon" aria-label="Toggle search bar">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </button>
+        </nav>
+    </header>
+    <figure class="main-image">
+        <img src="images/header-services-image.jpg" alt="main image of detailed background of space">
+    </figure>
+    <main>
+        
+        
+        <img id="web-image" src="images/services-image.svg" alt="Web Development Illustration" class="service-image">
+        <section id="host" class="host-section" aria-labelledby="host-title">
+            <div class="container">
+                <h2 id="host-title" class="section-title">Hosting Plans</h2>
+                <div class="plan-grid">
+                    <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Discount Plan">
+                        <div class="plan-card" data-animation="slide-left">
+                            <h3 class="plan-title">Discount Plan</h3>
+                            <p class="plan-price">$15.99<span class="plan-price-unit">/month</span></p>
+                            <p class="plan-description">For churches, non-profits & community services</p>
+                            <ul class="plan-features">
+                                <li>1 Website</li>
+                                <li>1 SSL Certificate</li>
+                                <li>2GB Memory</li>
+                                <li>cPanel Access</li>
+                                <li>Security & Maintenance Updates</li>
+                            </ul>
+                           
+                        </div>
+                    </a>
+                    <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Bronze Plan">
+                        <div class="plan-card" data-animation="slide-right">
+                            <h3 class="plan-title">Bronze Plan</h3>
+                            <p class="plan-price">$25.99<span class="plan-price-unit">/month</span></p>
+                            <p class="plan-description">Perfect for LLC business</p>
+                            <ul class="plan-features">
+                                <li>Unlimited Websites</li>
+                                <li>Unlimited SSL Certificates</li>
+                                <li>2GB Memory</li>
+                                <li>cPanel Access</li>
+                                <li>Security & Maintenance Updates</li>
+                            </ul>
+                           
+                        </div>
+                    </a>
+                    <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Gold Plan">
+                        <div class="plan-card" data-animation="slide-left">
+                            <h3 class="plan-title">Gold Plan</h3>
+                            <p class="plan-price">$35.99<span class="plan-price-unit">/month</span></p>
+                            <p class="plan-description">Business wanting to take a step into SEO</p>
+                            <ul class="plan-features">
+                                <li>Unlimited Websites</li>
+                                <li>Unlimited SSL Certificates</li>
+                                <li>4GB Memory</li>
+                                <li>cPanel Access</li>
+                                <li>Security & Maintenance Updates</li>
+                                <li>SEO Keyword Updates</li>
+                            </ul>
+                            
+                        </div>
+                    </a>
+                    <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Platinum Plan">
+                        <div class="plan-card platinum-card" data-animation="slide-left">
+                            <h3 class="plan-title">Platinum Plan</h3>
+                            <p class="plan-price">$59.99<span class="plan-price-unit">/month</span></p>
+                            <p class="plan-description">All In One Plan</p>
+                            <ul class="plan-features">
+                                <li>Unlimited Websites</li>
+                                <li>Unlimited SSL Certificates</li>
+                                <li>10GB Memory</li>
+                                <li>cPanel Access</li>
+                                <li>Security & Maintenance Updates</li>
+                                <li>Advanced SEO Keyword Updates</li>
+                                <li>Monthly Website Updates</li>
+                                <li>Personal Web Developer (up to 5 hours)</li>
+                                <li>*Perfect for monthly content changes or theme updates</li>
+                            </ul>
+                           
+                        </div>
+                    </a>
+                    <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for domain name services">
+                        <div class="plan-card domain-card" data-animation="slide-up">
+                            <h3 class="plan-title">Domain Names</h3>
+                            <p class="plan-price">$20.00<span class="plan-price-unit">/year</span></p>
+                            <p class="plan-description">Rent or transfer your existing domain name with ease.</p>
+                            <p class="domain-note">*Hosting clients can upgrade to the Platinum Plan on a month-by-month basis for additional features or changes without committing to a full-year plan.</p>
+                            <div class="button-container">
+                                <span class="plan-button">Contact Us</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="about.html" class="plan-card-link" aria-label="Contact us to learn more">
+                        <div class="plan-card comparison-card" data-animation="slide-up">
+                            <h3 class="plan-title">Why Choose Us?</h3>
+                            <p class="plan-description">Unlike competitors like GoDaddy and Hostinger, we provide unmatched value and support:</p>
+                            <ul class="plan-features">
+                                <li>Fair, all-inclusive pricing with no hidden fees or price hikes</li>
+                                <li>Unique personal web developer support (up to 5 hours monthly in Platinum Plan)</li>
+                                <li>Flexible month-to-month upgrades for hosting plans</li>
+                                <li>Local expertise tailored for Missouri businesses</li>
+                                <li>Comprehensive services including hosting, SSL, SEO, and maintenance</li>
+                                <li>Scalable solutions to grow with your business needs</li>
+                            </ul>
+                            <div class="button-container">
+                                <span class="plan-button">Learn More</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </section>
 
+        <!--Move bear into position, update javascript to include light/dark navbar, bottom-border for service-cards, update hand image to align with page -->
 
+        <section id="services" class="services-section" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section-title"></h2>
+                <div class="web-section">
+                    <div class="services-grid">
+                        <div class="plan-card service-card web-card"  id="web">
+                            <h2 id="web-title" class="section-title">Web Development</h2>
+                            <p class="section-text">Custom websites for any size business at <strong>affordable prices</strong>.</p>
+                            <div class="web-lists-grid">
+                                <div class="web-list-container">
+                                    <h3 id="web-services" class="card-title"><strong>Our Services</strong></h3>
+                                    <ul class="web-list"><br>
+                                        <li>Website Design (WordPress or Custom)</li>
+                                        <li>Responsive Design for All Devices</li>
+                                        <li>E-commerce Solutions</li>
+                                        <li>SEO-Optimized Websites</li>
+                                        <li>API Work</li>
+                                        <li>Complicated Back-end Tasks</li>
+                                    </ul>
+                                </div>
+                                <div class="web-list-container">
+                                    <h3 id="web-features" class="card-title"><strong>Key Features</strong></h3>
+                                    <ul class="web-list"><br>
+                                        <li>AI Chatbots</li>
+                                        <li>Custom Code</li>
+                                        <li>Email Services</li>
+                                        <li>3D Visuals and Animations</li>
+                                        <li>Secure Login Systems</li>
+                                        <li>*More Features Available</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-services-section">
+                    <div class="services-subgrid">
+                        <div class="plan-card service-card" data-animation="slide-right" id="app">
+                            <h2 id="app-title" class="section-title">Mobile App Development</h2>
+                            <p class="section-text">Custom mobile apps built with React Native and TypeScript for seamless performance across iOS and Android.</p>
+                            <ul class="service-list">
+                                <li>Cross-Platform Apps with React Native</li>
+                                <li>TypeScript for Scalable Code</li>
+                                <li>Custom UI/UX Design</li>
+                                <li>App Store Deployment</li>
+                                <li>*Work Closely with Clients</li>
+                            </ul>
+                        </div>
+                        <div class="plan-card service-card" data-animation="slide-left" id="seo">
+                            <h2 id="seo-title" class="section-title">SEO & Marketing</h2>
+                            <p class="section-text">Boost your online presence with targeted SEO and marketing strategies for better visibility and engagement.</p>
+                            <ul class="service-list">
+                                <li>Google & Facebook Ads Setup</li>
+                                <li>Canva-Designed Ad Creatives</li>
+                                <li>Keyword Updates for Google Ranking</li>
+                                <li>Website Optimization</li>
+                                <li>Targeted Plan to Improve Rankings</li>
+                                <li>Analytics Setup & Monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img id="seo-image" src="images/hands-2.svg" alt="SEO & Marketing Illustration" class="service-image">
+                    <img id="seo-image2" src="images/bear-design.svg" alt="Testing images" class="service-image">
+                </div>
+            </div>
+        </section>
+    </main>
 
-<footer class="bg-blue-900 text-white py-6" role="contentinfo">
-    <div class="container mx-auto px-4 text-center">
-        <p>© 2025 Kore Web Dynamics. Springfield, Missouri.</p>
-        <div class="flex justify-center space-x-4 mt-4">
-            <a href="https://linkedin.com" class="hover:text-blue-300" aria-label="Visit our LinkedIn page">LinkedIn</a>
-            <a href="https://instagram.com" class="hover:text-blue-300" aria-label="Visit our Facebook page">Facebook</a>
+    <div class="chatbot" onclick="openChatbot()" aria-label="Open chatbot for assistance">Chat with Us!</div>
+
+    <div id="chatbot-modal" class="chatbot-modal" aria-hidden="true">
+        <div class="chatbot-content">
+            <button onclick="closeChatbot()" class="chatbot-close" aria-label="Close chatbot">
+                <svg class="chatbot-close-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h2 class="chatbot-title">Website Cost Estimator</h2>
+            <div id="chatbot-messages" class="chatbot-messages"></div>
+            <div class="chatbot-input-container">
+                <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Type your message..." aria-label="Chatbot input">
+                <button onclick="sendMessage()" class="chatbot-send" aria-label="Send message">Send</button>
+            </div>
         </div>
     </div>
-</footer>
-    
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>© 2025 Kore Web Dynamics. Springfield, Missouri.</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com" class="footer-link" aria-label="Visit our LinkedIn page">LinkedIn</a>
+                <a href="https://instagram.com" class="footer-link" aria-label="Visit our Facebook page">Facebook</a>
+                <a href="policy.html" class="footer-link" aria-label="View our Privacy Policy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Javascript/script.js"></script>
 </body>
 </html>
