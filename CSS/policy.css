@@ -1,4 +1,4 @@
-/* General styles for the privacy policy page */
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,7 +7,7 @@ main {
     min-height: calc(100vh - 200px);
 }
 
-/* Privacy Policy Section */
+
 #privacy-policy {
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ main {
     width: 100%;
 }
 
-/* Card Styling */
+
 .policy-card {
     background: #ffffff;
     color: #374151;
@@ -100,7 +100,7 @@ main {
     color: #3b82f6;
 }
 
-/* Slide-in Animation */
+
 .policy-card[data-animation="slide-left"] {
     opacity: 0;
     transform: translateX(-50px);
@@ -118,7 +118,7 @@ main {
     transform: translateX(0);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .policy-container {
         padding: 0 1rem;

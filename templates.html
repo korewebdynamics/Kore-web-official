@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kore Web Dynamics - Website templates for affordable web design and hosting in Springfield, Missouri.">
+    <meta name="keywords" content="website templates, web design, Springfield Missouri, small business, hosting, Kore Web Dynamics">
+    <title>Kore Web Dynamics - Website Templates</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon_io/favicon.ico">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/template.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container mx-auto flex items-center justify-between px-4 py-2">
+                <a href="index.html" class="logo" aria-label="Go to Kore Web Dynamics homepage">
+                    <img src="images/black-transparent.png" alt="Kore Web Dynamics Logo" class="h-16">
+                </a>
+                <div class="hamburger md:hidden" id="hamburger" aria-expanded="false" aria-controls="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu md:flex space-x-6 hidden" id="menu" role="menubar">
+                    <li class="menu-item" role="menuitem">
+                        <a href="index.html" class="menu-link" aria-label="Home page">Home</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="index.html" class="submenu-link" role="menuitem">Welcome</a></li>
+                            <li role="none"><a href="index.html#Main" class="submenu-link" role="menuitem">Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="services.html" class="menu-link" aria-label="Services page">Services</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="services.html#host" class="submenu-link" role="menuitem">Hosting Plans</a></li>
+                            <li role="none"><a href="services.html#web" class="submenu-link" role="menuitem">Web Development</a></li>
+                            <li role="none"><a href="services.html#app" class="submenu-link" role="menuitem">App Development</a></li>
+                            <li role="none"><a href="services.html#seo" class="submenu-link" role="menuitem">SEO & Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="templates.html" class="menu-link" aria-label="Templates page">Templates</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="templates.html#business" class="submenu-link" role="menuitem">Business</a></li>
+                            <li role="none"><a href="templates.html#portfolio" class="submenu-link" role="menuitem">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="about.html" class="menu-link" aria-label="About page">About</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="about.html#mission" class="submenu-link" role="menuitem">Our Mission</a></li>
+                            <li role="none"><a href="about.html#team" class="submenu-link" role="menuitem">Our Team</a></li>
+                            <li role="none"><a href="policy.html" class="submenu-link" role="menuitem">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" role="menuitem">
+                        <a href="contact.html" class="menu-link" aria-label="Contact page">Contact</a>
+                        <ul class="submenu" role="menu">
+                            <li role="none"><a href="contact.html#form" class="submenu-link" role="menuitem">Get in Touch</a></li>
+                            <li role="none"><a href="contact.html#support" class="submenu-link" role="menuitem">Support</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search-bar flex items-center">
+                    <input type="text" id="search-input" placeholder="Search..." class="search-input hidden md:block" aria-label="Search website">
+                    <button id="search-toggle" class="search-icon" aria-label="Toggle search bar">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="stats-section" aria-labelledby="business">
+            <div class="stats-container">
+                <h1 id="business">The Power of a Professional Website</h1>
+                <p class="stats-intro">A well-designed website can transform your business by boosting customer engagement, increasing profits, and generating more leads. Here are some compelling statistics that highlight the impact of a professional online presence.</p>
+                <div class="stats-grid">
+                    <div class="stat-box animate-on-scroll">
+                        <h2 class="stat-title">88%</h2>
+                        <p class="stat-description">of consumers research a business online before making a purchase, making a professional website critical for capturing customer interest.</p>
+                    </div>
+                    <div class="stat-box animate-on-scroll">
+                        <h2 class="stat-title">$100 ROI</h2>
+                        <p class="stat-description">For every $1 invested in user experience and accessibility improvements, businesses can see up to $100 in return through increased conversions and customer loyalty.</p>
+                    </div>
+                    <div class="stat-box animate-on-scroll">
+                        <h2 class="stat-title">12%</h2>
+                        <p class="stat-description">Accessible websites see an average 12% increase in organic traffic, as search engines favor user-friendly and inclusive designs.</p>
+                    </div>
+                    <div class="stat-box animate-on-scroll">
+                        <h2 class="stat-title">61%</h2>
+                        <p class="stat-description">of users are unlikely to return to a website that is difficult to navigate, highlighting the importance of intuitive design for lead retention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="why-choose-section" aria-labelledby="why-choose-title">
+            <div class="why-choose-container">
+                <h1 id="why-choose-title">Why Choose Kore Web Dynamics?</h1>
+                <p class="why-choose-intro">At Kore Web Dynamics, we engineer custom websites tailored to your business, built with cutting-edge practices to stand out from generic, AI-generated templates. Our focus on SEO, accessibility, and semantic HTML ensures your site is unique, inclusive, and optimized for success.</p>
+                <div class="why-choose-grid">
+                    <div class="why-choose-box">
+                        <h2 class="why-choose-title">Search Engine Optimization</h2>
+                        <p class="why-choose-description">We use semantic HTML, descriptive page titles, and optimized alt text to improve your site's visibility on search engines. Our designs reduce bounce rates and increase engagement, helping you rank higher and attract more organic traffic.</p>
+                    </div>
+                    <div class="why-choose-box">
+                        <h2 class="why-choose-title">Accessibility for All</h2>
+                        <p class="why-choose-description">Our websites adhere to WCAG guidelines, ensuring compatibility with screen readers and keyboard navigation. This inclusivity reaches the 16% of the global population with disabilities, expanding your audience and enhancing user experience.</p>
+                    </div>
+                    <div class="why-choose-box">
+                        <h2 class="why-choose-title">Screen Reader Compatibility</h2>
+                        <p class="why-choose-description">We prioritize proper heading structures, ARIA landmarks, and descriptive link text to make your site navigable for visually impaired users, providing a seamless experience for screen reader users.</p>
+                    </div>
+                    <div class="why-choose-box">
+                        <h2 class="why-choose-title">Custom Engineering</h2>
+                        <p class="why-choose-description">Unlike mass-produced AI templates, our custom-built sites reflect your unique brand. We craft tailored solutions that set you apart, ensuring your website drives leads and conversions effectively.</p>
+                    </div>
+                </div>
+                <div class="why-choose-cta">
+                    <a href="contact.html#form" class="why-choose-cta-button">Get Your Custom Website</a>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="templates-section" aria-labelledby="portfolio">
+            <div class="templates-container">
+                <h1 id="portfolio">Website Templates</h1>
+                <p class="templates-intro">Explore our $149 website design and hosting package. Choose from customizable templates built with WordPress, HTML, CSS, JavaScript, MySQL, PHP, or other platforms to create a professional online presence for your business.</p>
+                <div class="templates-grid">
+                   
+                    <div class="template-box">
+                        <div class="template-preview">
+                            <nav class="template-nav template-nav-blue">
+                                <div class="template-nav-container">
+                                    <a href="#" class="template-logo">Your Logo Here</a>
+                                    <ul class="template-nav-list">
+                                        <li><a href="#" class="template-nav-link">Home</a></li>
+                                        <li><a href="#" class="template-nav-link">Services</a></li>
+                                        <li><a href="#" class="template-nav-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="template-hero">
+                                <img src="images/abstract-1900425_1280.jpg" alt="Modern Business Template Background" class="template-hero-image">
+                                <div class="template-hero-overlay template-hero-overlay-blue">
+                                    <h2 class="template-hero-title">Welcome to Your Business</h2>
+                                </div>
+                            </div>
+                            <div class="template-content">
+                                <h2 class="template-title">Modern Business</h2>
+                                <p class="template-description">A professional design with a bold blue header and a sleek hero image, ideal for corporate or consulting businesses. Features a clean layout with easy navigation.</p>
+                                <a href="contact.html#form" class="template-button">Choose This Template</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="template-box">
+                        <div class="template-preview">
+                            <nav class="template-nav template-nav-gradient">
+                                <div class="template-nav-container">
+                                    <a href="#" class="template-logo">Your Logo Here</a>
+                                    <ul class="template-nav-list">
+                                        <li><a href="#" class="template-nav-link">Portfolio</a></li>
+                                        <li><a href="#" class="template-nav-link">About</a></li>
+                                        <li><a href="#" class="template-nav-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="template-hero">
+                                <img src="images/abstract-1900425_1280.jpg" alt="Creative Portfolio Template Background" class="template-hero-image">
+                                <div class="template-hero-overlay template-hero-overlay-gradient">
+                                    <h2 class="template-hero-title">Showcase Your Work</h2>
+                                </div>
+                            </div>
+                            <div class="template-content">
+                                <h2 class="template-title">Creative Portfolio</h2>
+                                <p class="template-description">A vibrant, gradient-based design with a dynamic hero section, perfect for creatives and freelancers to showcase their portfolios.</p>
+                                <a href="contact.html#form" class="template-button">Choose This Template</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="template-box">
+                        <div class="template-preview">
+                            <nav class="template-nav template-nav-white">
+                                <div class="template-nav-container">
+                                    <a href="#" class="template-logo">Your Logo Here</a>
+                                    <ul class="template-nav-list">
+                                        <li><a href="#" class="template-nav-link">Shop</a></li>
+                                        <li><a href="#" class="template-nav-link">About</a></li>
+                                        <li><a href="#" class="template-nav-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="template-hero">
+                                <img src="images/abstract-1900425_1280.jpg" alt="Minimalist Retail Template Background" class="template-hero-image">
+                                <div class="template-hero-overlay template-hero-overlay-gray">
+                                    <h2 class="template-hero-title">Shop with Ease</h2>
+                                </div>
+                            </div>
+                            <div class="template-content">
+                                <h2 class="template-title">Minimalist Retail</h2>
+                                <p class="template-description">A clean, minimalist design with a white header and a subtle hero section, ideal for e-commerce or retail businesses.</p>
+                                <a href="contact.html#form" class="template-button">Choose This Template</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="template-box">
+                        <div class="template-preview">
+                            <nav class="template-nav template-nav-dark">
+                                <div class="template-nav-container">
+                                    <a href="#" class="template-logo">Your Logo Here</a>
+                                    <ul class="template-nav-list">
+                                        <li><a href="#" class="template-nav-link">Features</a></li>
+                                        <li><a href="#" class="template-nav-link">Pricing</a></li>
+                                        <li><a href="#" class="template-nav-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="template-hero">
+                                <img src="images/abstract-1900425_1280.jpg" alt="Tech Startup Template Background" class="template-hero-image">
+                                <div class="template-hero-overlay template-hero-overlay-dark">
+                                    <h2 class="template-hero-title">Innovate Today</h2>
+                                </div>
+                            </div>
+                            <div class="template-content">
+                                <h2 class="template-title">Tech Startup</h2>
+                                <p class="template-description">A modern, dark-themed design with a bold hero section, tailored for tech startups and innovative businesses.</p>
+                                <a href="contact.html#form" class="template-button">Choose This Template</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="template-box">
+                        <div class="template-preview">
+                            <nav class="template-nav template-nav-teal">
+                                <div class="template-nav-container">
+                                    <a href="#" class="template-logo">Your Logo Here</a>
+                                    <ul class="template-nav-list">
+                                        <li><a href="#" class="template-nav-link">Home</a></li>
+                                        <li><a href="#" class="template-nav-link">Consulting</a></li>
+                                        <li><a href="#" class="template-nav-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="template-hero">
+                                <img src="images/pexels-suzyhazelwood-1629236.jpg" alt="Elegant Consultancy Template Background" class="template-hero-image">
+                                <div class="template-hero-overlay template-hero-overlay-teal">
+                                    <h2 class="template-hero-title">Expert Consulting Solutions</h2>
+                                </div>
+                            </div>
+                            <div class="template-content">
+                                <h2 class="template-title">Elegant Consultancy</h2>
+                                <p class="template-description">A sophisticated teal-themed design with a soft hero image, perfect for consulting firms or professional services seeking an elegant online presence.</p>
+                                <a href="contact.html#form" class="template-button">Choose This Template</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Template 6: Bold Creative Agency -->
+                    <div class="template-box">
+                        <div class="template-preview">
+                            <nav class="template-nav template-nav-orange">
+                                <div class="template-nav-container">
+                                    <a href="#" class="template-logo">Your Logo Here</a>
+                                    <ul class="template-nav-list">
+                                        <li><a href="#" class="template-nav-link">Work</a></li>
+                                        <li><a href="#" class="template-nav-link">Services</a></li>
+                                        <li><a href="#" class="template-nav-link">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="template-hero">
+                                <img src="images/pexels-suzyhazelwood-1629236.jpg" alt="Bold Creative Agency Template Background" class="template-hero-image">
+                                <div class="template-hero-overlay template-hero-overlay-orange">
+                                    <h2 class="template-hero-title">Unleash Your Creativity</h2>
+                                </div>
+                            </div>
+                            <div class="template-content">
+                                <h2 class="template-title">Bold Creative Agency</h2>
+                                <p class="template-description">A striking orange-themed design with a vibrant hero section, ideal for creative agencies or design-focused businesses looking to stand out.</p>
+                                <a href="contact.html#form" class="template-button">Choose This Template</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="templates-cta">
+                    <a href="contact.html#form" class="templates-cta-button">Customize Your Template</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="chatbot" onclick="openChatbot()" aria-label="Open chatbot for assistance">Chat with Us!</div>
+    <div id="chatbot-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" aria-hidden="true">
+        <div class="bg-white rounded-lg w-full max-w-md p-6 relative max-h-[80vh] overflow-y-auto">
+            <button onclick="closeChatbot()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" aria-label="Close chatbot">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <h2 class="text-2xl font-bold mb-4">Website Cost Estimator</h2>
+            <div id="chatbot-messages" class="mb-4"></div>
+            <div class="flex">
+                <input type="text" id="chatbot-input" class="flex-1 border rounded-l-lg p-2" placeholder="Type your message..." aria-label="Chatbot input">
+                <button onclick="sendMessage()" class="bg-blue-600 text-white rounded-r-lg px-4 py-2 hover:bg-blue-700" aria-label="Send message">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-blue-900 text-white py-6" role="contentinfo">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Kore Web Dynamics all rights reserved</p>
+            <p>Hosting | Website | SEO | Artificial Intelligence | Mobile Applications | Software Engineer</p>
+            <p>Missouri | Springfield | Bolivar | Joplin | Branson | Kansas City | St. Louis | Clinton</p>
+            <div class="footer-links flex justify-center space-x-4 mt-4">
+                <a href="policy.html" class="footer-link" aria-label="View our Privacy Policy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="social-sticky">
+        <div class="follow-button" aria-label="Show social media links">Follow us</div>
+        <div class="social-container">
+            <a href="https://facebook.com" class="social-icon" data-icon="facebook" aria-label="Visit our Facebook page"></a>
+            <a href="https://instagram.com" class="social-icon" data-icon="instagram" aria-label="Visit our Instagram page"></a>
+            <a href="https://github.com" class="social-icon" data-icon="github" aria-label="Visit our GitHub page"></a>
+            <a href="https://linkedin.com" class="social-icon" data-icon="linkedin" aria-label="Visit our LinkedIn page"></a>
+        </div>
+    </div>
+
+    <script src="Javascript/script.js"></script>
+    <script src="Javascript/scroll-animation.js"></script>
+</body>
+</html>

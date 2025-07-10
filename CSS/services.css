@@ -1,4 +1,4 @@
-/* CSS Variables */
+
 :root {
     --primary-blue: #1e40af;
     --primary-blue-hover: #1d4ed8;
@@ -10,30 +10,187 @@
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --light-blue: #d1eaff; 
 }
 
-/* General Styles */
 body {
     background-color: var(--gray-bg);
     font-family: 'Oswald', sans-serif;
     margin: 0;
 }
 
-.host-section h2 {
-    color: white;
-    font-size: xx-large;
+.hosting-intro-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    margin-top: 20px;
 }
+.hosting-intro-list ul {
+    text-align: left;
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+}
+.hosting-intro-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.pay-for-hosting-list {
+    display: flex;
+    justify-content: center;
+}
+.pay-for-hosting-list ul {
+    text-align: left;
+    max-width: 1000px;
+    list-style: none;
+    padding: 0;
+}
+.pay-for-hosting-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+.hosting-prices-list {
+    display: flex;
+    justify-content: center;
+}
+.hosting-prices-list ul {
+    text-align: left;
+    max-width: 700px;
+    list-style: none;
+    padding: 0 16px;
+}
+.hosting-prices-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    border-bottom: 2px solid black;
+}
+.hosting-prices-list li strong {
+    flex: 0 0 auto;
+    margin-right: 8px;
+}
+.hosting-prices-list li span:not(.feature-icon) {
+    flex: 1 1 auto;
+}
+.hosting-intro-section {
+    background-color: var(--gray-bg);
+    padding: 48px 0;
+}
+.pay-for-hosting-section {
+    background-color: var(--white);
+    padding: 48px 0;
+    animation: pulseBackground 4s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+.hosting-prices-section {
+    background-color: var(--gray-bg);
+    padding: 48px 0;
+}
+.hosting-intro-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 1000px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.pay-for-hosting-section .hosting-intro-card {
+    background-color: var(--gray-bg);
+}
+.hosting-prices-section .hosting-intro-card {
+    background-color: var(--white);
+    max-width: 1000px;
+}
+.hosting-intro-text {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.hosting-intro-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.hosting-intro-section .hosting-intro-card.visible {
+    animation: pulse 1.5s ease-in-out 0.6s 2;
+}
+
+
+@keyframes pulseBackground {
+    0% {
+        background-color: var(--white);
+    }
+    50% {
+        background-color: var(--gray-dark);
+    }
+    100% {
+        background-color: var(--white);
+    }
+}
+
+.feature-icon {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    align-items: center;
+}
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
 
 main {
     position: relative;
 }
 
-/* Hosting Section */
+
 .host-section {
     padding: 48px 0;
-    background-color: var(--gray-dark);
-   
+    background: linear-gradient(45deg, var(--primary-blue) 0%, var(--white) 100%);
 }
+
+.separator-section {
+    padding: 0;
+    background-color: var(--gray-bg);
+}
+.separator-image {
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 
 .container {
     max-width: 1280px;
@@ -194,7 +351,7 @@ main {
     background-color: var(--primary-blue-hover);
 }
 
-/* Services Section */
+
 .services-section {
     padding: 48px 0;
     background-image: url('../images/background-7275953_1920.jpg');
@@ -439,7 +596,7 @@ transform: rotate(-1deg);
     text-align: center;
 }
 
-/* Chatbot Styles */
+
 .chatbot {
     position: fixed;
     bottom: 20px;
@@ -533,7 +690,7 @@ transform: rotate(-1deg);
     background-color: var(--primary-blue-hover);
 }
 
-/* Footer Styles */
+
 .footer {
     background-color: #1e3a8a;
     color: var(--white);
@@ -558,4 +715,36 @@ transform: rotate(-1deg);
 
 .footer p {
     text-align: center;
+}
+
+
+
+.feature-icon {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    align-items: center;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.plan-features li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.plan-features {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+.plan-card-link:hover .feature-icon img {
+    filter: brightness(0.9);
 }

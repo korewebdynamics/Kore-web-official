@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar Interactivity
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
     const searchToggle = document.getElementById('search-toggle');
@@ -8,13 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let scene, camera, renderer, starGeo1, starGeo2, starGeo3, stars1, stars2, stars3;
     let velocities1, velocities2, velocities3, accelerations;
 
-    // Hamburger Menu Toggle
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         menu.classList.toggle('active');
     });
 
-    // Search Bar Toggle (Mobile)
     searchToggle.addEventListener('click', () => {
         if (window.innerWidth < 768) {
             searchInput.classList.toggle('active');
@@ -24,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Search Functionality (Placeholder)
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             alert(`Searching for: ${searchInput.value}`);
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close menu when clicking a link (Mobile)
     const menuLinks = document.querySelectorAll('.menu-link');
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -43,57 +38,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll event to toggle navbar text color
     function updateNavbarColor() {
         const scrollPosition = window.scrollY;
-        const heroSection = document.getElementById('hero');
-        const introSection = document.getElementById('intro-animation');
-        const servicesSection = document.getElementById('Main');
-        const mainImage = document.querySelector('.main-image');
-        const hostSection = document.getElementById('host');
-
-        // Check if on services.html
         if (window.location.pathname.includes('services.html')) {
-            const mainImageTop = mainImage ? mainImage.getBoundingClientRect().top + scrollPosition : 0;
-            const mainImageBottom = mainImage ? mainImageTop + mainImage.offsetHeight : 0;
+            const hostingIntroSection = document.querySelector('.hosting-intro-section');
+            const hostSection = document.getElementById('host');
+            const servicesSection = document.getElementById('services');
+
+            const hostingIntroTop = hostingIntroSection ? hostingIntroSection.getBoundingClientRect().top + scrollPosition : 0;
             const hostTop = hostSection ? hostSection.getBoundingClientRect().top + scrollPosition : Infinity;
+            const hostBottom = hostSection ? hostTop + hostSection.offsetHeight : Infinity;
+            const servicesTop = servicesSection ? servicesSection.getBoundingClientRect().top + scrollPosition : Infinity;
 
-            if (scrollPosition < mainImageTop) {
-                // Top of page: Light text
+            if (scrollPosition < hostBottom) {
+                
                 navbar.classList.remove('navbar-dark-text');
-            } else if (scrollPosition >= mainImageTop && scrollPosition < hostTop) {
-                // Over main-image: Dark text
+            } else if (scrollPosition >= hostBottom && scrollPosition < servicesTop + 100) {
+                
                 navbar.classList.add('navbar-dark-text');
-            } else if (scrollPosition >= hostTop) {
-                // Over #host and beyond: Light text
-                navbar.classList.remove('navbar-dark-text');
+            } else {
+               
+                navbar.classList.add('navbar-dark-text');
             }
-        } 
-        // Original logic for index.html
-        else if (heroSection && introSection && servicesSection) {
-            const heroTop = heroSection.getBoundingClientRect().top + scrollPosition;
-            const heroBottom = heroTop + heroSection.offsetHeight;
-            const introTop = introSection.getBoundingClientRect().top + scrollPosition;
-            const introBottom = introTop + introSection.offsetHeight;
-            const servicesTop = servicesSection.getBoundingClientRect().top + scrollPosition;
-            const servicesBottom = servicesTop + servicesSection.offsetHeight;
+        } else {
+            const heroSection = document.getElementById('hero');
+            const welcomeSection = document.querySelector('.welcome-section');
+            const introSection = document.getElementById('intro-animation');
+            const servicesSection = document.getElementById('Main');
 
-            if (scrollPosition < 100) {
-                navbar.classList.remove('navbar-dark-text');
-            } else if (scrollPosition >= heroTop && scrollPosition < heroBottom) {
-                navbar.classList.add('navbar-dark-text');
-            } else if (scrollPosition >= introTop && scrollPosition < introBottom) {
-                navbar.classList.add('navbar-dark-text');
-            } else if (scrollPosition >= servicesTop && scrollPosition < servicesBottom) {
-                navbar.classList.remove('navbar-dark-text');
+            if (heroSection && welcomeSection && introSection && servicesSection) {
+                const heroTop = heroSection.getBoundingClientRect().top + scrollPosition;
+                const heroBottom = heroTop + heroSection.offsetHeight;
+                const welcomeTop = welcomeSection.getBoundingClientRect().top + scrollPosition;
+                const welcomeBottom = welcomeTop + welcomeSection.offsetHeight;
+                const introTop = introSection.getBoundingClientRect().top + scrollPosition;
+                const introBottom = introTop + introSection.offsetHeight;
+                const servicesTop = servicesSection.getBoundingClientRect().top + scrollPosition;
+                const servicesBottom = servicesTop + servicesSection.offsetHeight;
+
+                if (scrollPosition < heroTop || scrollPosition >= heroBottom - 100) {
+                    navbar.classList.remove('navbar-dark-text');
+                } else if (scrollPosition >= heroTop && scrollPosition < heroBottom - 100) {
+                    navbar.classList.add('navbar-dark-text');
+                } else if (scrollPosition >= welcomeTop && scrollPosition < welcomeBottom) {
+                    navbar.classList.remove('navbar-dark-text');
+                } else if (scrollPosition >= introTop && scrollPosition < introBottom) {
+                    navbar.classList.remove('navbar-dark-text');
+                } else if (scrollPosition >= servicesTop && scrollPosition < servicesBottom) {
+                    navbar.classList.remove('navbar-dark-text');
+                } else {
+                    navbar.classList.remove('navbar-dark-text');
+                }
             }
         }
     }
 
-    // Typewriter Effect
     const typewriter = document.getElementById('typewriter');
     if (typewriter) {
-        const text = 'ONE STOP SHOP FOR WEBSITE DEVELOPMENT AND MAINTENANCE';
+        const text = 'Grow Your Online Presence';
         let index = 0;
 
         function type() {
@@ -108,7 +110,27 @@ document.addEventListener('DOMContentLoaded', () => {
         type();
     }
 
-    // Intersection Observer for Slide Animation
+    const sections = document.querySelectorAll('.hosting-intro-section, .pay-for-hosting-section, .hosting-prices-section');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelector('.hosting-intro-card').classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
     const slideCards = document.querySelectorAll('.slide-card, .plan-card');
     if (slideCards.length > 0) {
         const observer = new IntersectionObserver((entries) => {
@@ -123,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slideCards.forEach(card => observer.observe(card));
     }
 
-    // Three.js Starfield for Homepage
     function initStarfield() {
         const canvas = document.getElementById('three-canvas');
         if (!canvas) {

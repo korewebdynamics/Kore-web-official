@@ -413,15 +413,273 @@ header, .navbar {
 
 
 
+footer {
+    background-color: #1e40af;
+    color: #ffffff;
+    padding: 1.5rem 0; 
+    text-align: center;
+}
+
+/* Sticky Social Links */
+.social-sticky {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.social-sticky .follow-button {
+    background-color: #1e40af;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-sticky .follow-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: shine 2s linear infinite;
+    z-index: 1;
+}
+
+.social-sticky .follow-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.social-sticky .social-container {
+    position: absolute;
+    bottom: 100%; /* Position above the follow-button */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    
+    border-radius: 10px;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* Start slightly below and slide up */
+    transition: opacity 0.7s ease, transform 0.7s ease, visibility 0s linear 0.7s;
+    margin-bottom: 10px;
+}
+
+.social-sticky:hover .social-container {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Slide up to align above */
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.social-sticky .social-container .social-text {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.social-sticky .social-container .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #d1d5db;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+}
+
+.social-sticky .social-container .social-icon[data-icon="facebook"] {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg');
+}
+
+.social-sticky .social-container .social-icon[data-icon="instagram"] {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg');
+}
+
+.social-sticky .social-container .social-icon[data-icon="github"] {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg');
+}
+
+.social-sticky .social-container .social-icon[data-icon="linkedin"] {
+    background-image: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg');
+}
+
+.social-sticky .social-container .social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+/* Hover Effects for Icons */
+.social-sticky .social-container .social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.social-sticky .social-container .social-icon[data-icon="facebook"]:hover {
+    background-color: #1877F2;
+}
+
+.social-sticky .social-container .social-icon[data-icon="instagram"]:hover::before {
+    background: linear-gradient(45deg, #F58529, #DD2A7B);
+    background-size: 100% 100%;
+    opacity: 0.7;
+}
+
+.social-sticky .social-container .social-icon[data-icon="linkedin"]:hover {
+    background-color: #0077B5;
+}
+
+.social-sticky .social-container .social-icon[data-icon="github"]:hover {
+    background-color: #333333;
+}
+
+/* Shine Animation */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
 
 
+.caption-left {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.75rem; 
+    font-style: italic;
+    color: #000000; 
+    position: absolute;
+    right: 20px;
+    top: 80%; 
+    transform: translateY(-50%); 
+    z-index: 10; 
+}
 
 
+.wrapper1 {
+    padding: 10px 10%;
+
+}
+
+#card-area {
+    padding: 50px 0;
+
+}
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.box {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #e3e3e3 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
 
 
+}
 
+.overlay h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
 
+}
 
+.overlay a {
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+
+}
+
+.box:hover img{
+    transform: scale(1.2);
+
+}
+
+.box:hover .overlay {
+    height: 100%;
+}
 
 
 
@@ -439,6 +697,36 @@ header, .navbar {
 
 
 @media (max-width: 768px) {
+  .social-sticky {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .social-sticky .follow-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .social-sticky .social-container {
+        padding: 0.5rem;
+    }
+
+    .social-sticky .social-container .social-text {
+        font-size: 1rem;
+    }
+
+    .social-sticky .social-container .social-icon {
+        width: 30px;
+        height: 30px;
+        background-size: 70%;
+    }
+
+     .caption-left {
+        font-size: 0.7rem; 
+        left: 10px; 
+        top: 85%; 
+    }
+
     .menu {
         display: none;
         position: absolute;
