@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Template Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Embedded CSS for the Professional Template --- */
+        :root {
+            --prof-primary: #0d47a1; /* Deep Blue */
+            --prof-secondary: #f5f5f5; /* Light Gray */
+            --prof-dark: #212121; /* Dark Gray / Black */
+            --prof-light: #ffffff;
+            --prof-accent: #1976d2; /* Brighter Blue */
+        }
+        body { margin: 0; font-family: 'Roboto', sans-serif; background-color: var(--prof-light); }
+        .mock-container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+        /* Mock Navbar */
+        .mock-nav { background-color: var(--prof-light); padding: 1rem; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
+        .mock-nav .logo { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--prof-primary); }
+        .mock-nav .links { display: flex; gap: 1.5rem; color: var(--prof-dark); }
+        /* Mock Hero Section */
+        .mock-hero { background-color: var(--prof-secondary); padding: 6rem 1rem; text-align: center; }
+        .mock-hero h1 { font-family: 'Oswald', sans-serif; font-size: 3rem; color: var(--prof-primary); margin: 0 0 1rem 0; }
+        .mock-hero p { font-size: 1.2rem; color: #616161; max-width: 60ch; margin: 0 auto 2rem auto; }
+        .mock-button { display: inline-block; background-color: var(--prof-primary); color: var(--prof-light); padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; }
+        /* Mock Content Section */
+        .mock-content { padding: 4rem 0; }
+        .mock-content h2 { font-family: 'Oswald', sans-serif; text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: var(--prof-dark); }
+        .mock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .mock-grid-item { text-align: center; }
+        .mock-grid-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
+        .mock-grid-item h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--prof-dark); }
+        /* Mock Footer */
+        .mock-footer { background-color: var(--prof-dark); color: var(--prof-light); padding: 2rem 1rem; text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <nav class="mock-nav"><div class="mock-container"><div class="logo">ProBiz Solutions</div><div class="links"><span>Home</span><span>Services</span><span>Contact</span></div></div></nav>
+    <main>
+        <section class="mock-hero">
+            <div class="mock-container"><h1>Strategic Business Solutions</h1><p>Driving growth for Missouri businesses through innovation, dedication, and unparalleled expertise in the digital landscape.</p><a href="#" class="mock-button">Request a Consultation</a></div>
+        </section>
+        <section class="mock-content">
+            <div class="mock-container"><h2>Our Core Services</h2><div class="mock-grid"><div class="mock-grid-item"><img src="../images/template-portraitSize.jpg" alt="Office meeting"><h3>Financial Consulting</h3><p>Guiding your business to financial stability and growth.</p></div><div class="mock-grid-item">
+                <img src="../images/computer-image6.jpg" alt="Person coding"><h3>Technology Integration</h3><p>Modernizing your workflow with cutting-edge tech.</p></div><div class="mock-grid-item">
+                    <img src="../images/computer-image2.jpg" alt="Cityscape"><h3>Market Strategy</h3><p>Positioning your brand to dominate the local market.</p></div></div></div>
+        </section>
+    </main>
+    <footer class="mock-footer"><div class="mock-container"><p>© 2025 ProBiz Solutions | 123 Main St, Springfield, MO</p></div></footer>
+</body>
+</html>

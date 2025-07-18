@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Business Template Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Embedded CSS for the Local Template --- */
+        :root {
+            --local-bg: #fdfaf6;
+            --local-text: #5d4037; /* Warm Brown */
+            --local-primary: #8d6e63; /* Lighter Brown */
+            --local-dark: #4e342e; /* Darker Brown */
+            --local-accent: #a1887f;
+        }
+        body { margin: 0; font-family: 'Roboto', sans-serif; background-color: var(--local-bg); color: var(--local-text); }
+        .mock-container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+        /* Mock Navbar */
+        .mock-nav { background-color: var(--local-primary); color: var(--local-bg); padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        .mock-nav .logo { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; }
+        .mock-nav .links { display: flex; gap: 1.5rem; }
+        /* Mock Hero Section */
+        .mock-hero { padding: 4rem 1rem; text-align: center; }
+        .mock-hero h1 { font-family: 'Oswald', sans-serif; font-size: 3rem; color: var(--local-dark); margin: 0 0 1rem 0; }
+        .mock-hero p { font-size: 1.2rem; max-width: 50ch; margin: 0 auto 2rem auto; }
+        .mock-button { display: inline-block; background-color: var(--local-dark); color: var(--local-bg); padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; }
+        /* Mock Content Section */
+        .mock-content { padding: 4rem 0; background-color: #efebe9; }
+        .mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+        .mock-grid img { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; }
+        .mock-grid-text h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--local-dark); }
+        .mock-grid-text p { margin-bottom: 1.5rem; line-height: 1.7; }
+        /* Mock Footer */
+        .mock-footer { background-color: var(--local-dark); color: var(--local-bg); padding: 2rem 1rem; text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <nav class="mock-nav"><div class="mock-container"><div class="logo">The Corner Cafe</div><div class="links"><span>Menu</span><span>Hours</span><span>Order Online</span></div></div></nav>
+    <main>
+        <section class="mock-hero">
+            <div class="mock-container"><h1>Springfield's Favorite Coffee Stop</h1><p>Serving locally roasted coffee and fresh pastries daily from the heart of our community.</p><a href="#" class="mock-button">See Today's Menu</a></div>
+        </section>
+        <section class="mock-content">
+            <div class="mock-container">
+                <div class="mock-grid">
+                    <div class="mock-grid-image"><img src="../images/template-coffee.jpg" alt="A cozy cafe interior"></div>
+                    <div class="mock-grid-text"><h2>Our Story</h2><p>Founded in 2015, The Corner Cafe was built on a simple idea: good coffee and good company. We believe in sourcing the best local ingredients and creating a warm, welcoming space for everyone in the neighborhood. Come say hello!</p>
+                        <a href="#" class="mock-button">Our Location</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="mock-footer"><div class="mock-container"><p>The Corner Cafe © 2025 | 456 South St, Springfield, MO</p></div></footer>
+</body>
+</html>

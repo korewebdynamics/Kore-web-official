@@ -1,168 +1,164 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- ELEMENT SELECTORS ---
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
     const searchToggle = document.getElementById('search-toggle');
     const searchInput = document.getElementById('search-input');
     const navbar = document.querySelector('.navbar');
+    
+    // Starfield variables
     let scene, camera, renderer, starGeo1, starGeo2, starGeo3, stars1, stars2, stars3;
     let velocities1, velocities2, velocities3, accelerations;
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        menu.classList.toggle('active');
-    });
+    // --- NAVBAR & MENU LOGIC ---
+    if (hamburger && menu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+    }
 
-    searchToggle.addEventListener('click', () => {
-        if (window.innerWidth < 768) {
-            searchInput.classList.toggle('active');
-            if (searchInput.classList.contains('active')) {
-                searchInput.focus();
-            }
-        }
-    });
-
-    searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            alert(`Searching for: ${searchInput.value}`);
-            searchInput.value = '';
-        }
-    });
-
-    const menuLinks = document.querySelectorAll('.menu-link');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
+    if (searchToggle && searchInput) {
+        searchToggle.addEventListener('click', () => {
             if (window.innerWidth < 768) {
+                searchInput.classList.toggle('active');
+                if (searchInput.classList.contains('active')) {
+                    searchInput.focus();
+                }
+            }
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                alert(`Searching for: ${searchInput.value}`);
+                searchInput.value = ''; 
+            }
+        });
+    }
+
+    document.querySelectorAll('.menu-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 768 && hamburger && menu) {
                 hamburger.classList.remove('active');
                 menu.classList.remove('active');
             }
         });
     });
 
-    function updateNavbarColor() {
+    
+     function updateNavbarColor() {
+        if (!navbar) return;
         const scrollPosition = window.scrollY;
-        if (window.location.pathname.includes('services.html')) {
-            const hostingIntroSection = document.querySelector('.hosting-intro-section');
-            const hostSection = document.getElementById('host');
-            const servicesSection = document.getElementById('services');
+        const path = window.location.pathname;
+        let isOverDarkSection = false;
 
-            const hostingIntroTop = hostingIntroSection ? hostingIntroSection.getBoundingClientRect().top + scrollPosition : 0;
-            const hostTop = hostSection ? hostSection.getBoundingClientRect().top + scrollPosition : Infinity;
-            const hostBottom = hostSection ? hostTop + hostSection.offsetHeight : Infinity;
-            const servicesTop = servicesSection ? servicesSection.getBoundingClientRect().top + scrollPosition : Infinity;
-
-            if (scrollPosition < hostBottom) {
-                
-                navbar.classList.remove('navbar-dark-text');
-            } else if (scrollPosition >= hostBottom && scrollPosition < servicesTop + 100) {
-                
-                navbar.classList.add('navbar-dark-text');
-            } else {
-               
-                navbar.classList.add('navbar-dark-text');
-            }
-        } else {
+        
+        if (path.includes('index.html') || path === '/' || path.endsWith('/')) {
             const heroSection = document.getElementById('hero');
-            const welcomeSection = document.querySelector('.welcome-section');
-            const introSection = document.getElementById('intro-animation');
-            const servicesSection = document.getElementById('Main');
+            if (heroSection) {
+                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                if (scrollPosition > 100 && scrollPosition < heroBottom - 150) {
+                    isOverDarkSection = true;
+                }
+            }
+        
+        
+        } else if (path.includes('services.html')) {
+            
+            const darkElements = [
+                document.querySelector('.service-header-section'),
+                document.getElementById('web-dev-banner'),
+                document.querySelector('.parallax-break'),
+                document.getElementById('ai')
+            ];
 
-            if (heroSection && welcomeSection && introSection && servicesSection) {
-                const heroTop = heroSection.getBoundingClientRect().top + scrollPosition;
-                const heroBottom = heroTop + heroSection.offsetHeight;
-                const welcomeTop = welcomeSection.getBoundingClientRect().top + scrollPosition;
-                const welcomeBottom = welcomeTop + welcomeSection.offsetHeight;
-                const introTop = introSection.getBoundingClientRect().top + scrollPosition;
-                const introBottom = introTop + introSection.offsetHeight;
-                const servicesTop = servicesSection.getBoundingClientRect().top + scrollPosition;
-                const servicesBottom = servicesTop + servicesSection.offsetHeight;
-
-                if (scrollPosition < heroTop || scrollPosition >= heroBottom - 100) {
-                    navbar.classList.remove('navbar-dark-text');
-                } else if (scrollPosition >= heroTop && scrollPosition < heroBottom - 100) {
-                    navbar.classList.add('navbar-dark-text');
-                } else if (scrollPosition >= welcomeTop && scrollPosition < welcomeBottom) {
-                    navbar.classList.remove('navbar-dark-text');
-                } else if (scrollPosition >= introTop && scrollPosition < introBottom) {
-                    navbar.classList.remove('navbar-dark-text');
-                } else if (scrollPosition >= servicesTop && scrollPosition < servicesBottom) {
-                    navbar.classList.remove('navbar-dark-text');
-                } else {
-                    navbar.classList.remove('navbar-dark-text');
+            
+            for (const element of darkElements) {
+                if (element) { // 
+                    const elementTop = element.offsetTop - navbar.offsetHeight;
+                    const elementBottom = element.offsetTop + element.offsetHeight - navbar.offsetHeight;
+                    
+                    if (scrollPosition > elementTop && scrollPosition < elementBottom) {
+                        isOverDarkSection = true;
+                        break; 
+                    }
                 }
             }
         }
+        
+        
+        if (isOverDarkSection) {
+            navbar.classList.add('navbar-dark-text');
+        } else {
+            navbar.classList.remove('navbar-dark-text');
+        }
     }
 
-    const typewriter = document.getElementById('typewriter');
-    if (typewriter) {
-        const text = 'Grow Your Online Presence';
+
+    
+    const typewriterElement = document.getElementById('typewriter');
+    let typewriterStarted = false;
+
+    function startTypewriter() {
+        if (!typewriterElement || typewriterStarted) return;
+        
+        typewriterStarted = true;
+        const text = 'Automate. Engage. Grow.';
         let index = 0;
+        typewriterElement.textContent = '';
 
         function type() {
             if (index < text.length) {
-                typewriter.textContent += text.charAt(index);
+                typewriterElement.textContent += text.charAt(index);
                 index++;
                 setTimeout(type, 100);
             } else {
-                typewriter.style.animation = 'blink 0.7s step-end infinite';
+                typewriterElement.classList.add('typing-done');
             }
         }
         type();
     }
 
-    const sections = document.querySelectorAll('.hosting-intro-section, .pay-for-hosting-section, .hosting-prices-section');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.querySelector('.hosting-intro-card').classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    const slideCards = document.querySelectorAll('.slide-card, .plan-card');
-    if (slideCards.length > 0) {
+    // --- INTERSECTION OBSERVERS FOR SCROLL ANIMATIONS ---
+    const aiSection = document.getElementById('ai-services');
+    if (aiSection) {
+        const typewriterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startTypewriter();
+                    typewriterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        typewriterObserver.observe(aiSection);
+    }
+    
+    // This selector now includes all animated card classes
+    const animatedCards = document.querySelectorAll('.slide-card, .plan-card, .service-card, .service-card-animate');
+    if (animatedCards.length > 0) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const animation = entry.target.getAttribute('data-animation');
-                    entry.target.classList.add(animation, 'visible');
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.3 });
-
-        slideCards.forEach(card => observer.observe(card));
+        }, { threshold: 0.1 });
+        animatedCards.forEach(card => observer.observe(card));
     }
 
+    // --- THREE.JS STARFIELD LOGIC ---
     function initStarfield() {
         const canvas = document.getElementById('three-canvas');
-        if (!canvas) {
-            return;
-        }
+        if (!canvas) return;
 
         scene = new THREE.Scene();
         scene.background = new THREE.Color(0x000000);
-
-        camera = new THREE.PerspectiveCamera(
-            60,
-            window.innerWidth / window.innerHeight,
-            1,
-            1000
-        );
+        camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
         camera.position.z = 1;
         camera.rotation.x = Math.PI / 2;
-
         renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
@@ -188,11 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
         starGeo2.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions2), 3));
         starGeo3 = new THREE.BufferGeometry();
         starGeo3.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions3), 3));
-
         const material1 = new THREE.PointsMaterial({ color: 0xaaaaaa, size: 0.4, transparent: true });
         const material2 = new THREE.PointsMaterial({ color: 0x00ffff, size: 0.5, transparent: true });
         const material3 = new THREE.PointsMaterial({ color: 0xffa500, size: 0.2, transparent: true });
-
         stars1 = new THREE.Points(starGeo1, material1);
         stars2 = new THREE.Points(starGeo2, material2);
         stars3 = new THREE.Points(starGeo3, material3);
@@ -203,14 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
-
         animateStarfield();
     }
 
     function animateStarfield() {
-        if (!stars1 || !stars2 || !stars3 || !starGeo1.attributes.position) {
-            return;
-        }
+        if (!stars1 || !stars2 || !stars3 || !starGeo1.attributes.position) return;
 
         const positions1 = starGeo1.attributes.position.array;
         const positions2 = starGeo2.attributes.position.array;
@@ -225,18 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
             positions2[idx] -= velocities2[i];
             positions3[idx] -= velocities3[i];
 
-            if (positions1[idx] < -200) {
-                positions1[idx] = 200;
-                velocities1[i] = 0;
-            }
-            if (positions2[idx] < -200) {
-                positions2[idx] = 200;
-                velocities2[i] = 0;
-            }
-            if (positions3[idx] < -200) {
-                positions3[idx] = 200;
-                velocities3[i] = 0;
-            }
+            if (positions1[idx] < -200) { positions1[idx] = 200; velocities1[i] = 0; }
+            if (positions2[idx] < -200) { positions2[idx] = 200; velocities2[i] = 0; }
+            if (positions3[idx] < -200) { positions3[idx] = 200; velocities3[i] = 0; }
         }
 
         starGeo1.attributes.position.needsUpdate = true;
@@ -250,11 +232,12 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateStarfield);
     }
 
-    if (window.location.pathname.includes('index.html') || !window.location.pathname.includes('services.html')) {
+    // --- INITIALIZATION CALLS ---
+    if (document.getElementById('three-canvas')) {
         initStarfield();
     }
-
+    
     window.addEventListener('scroll', updateNavbarColor);
     window.addEventListener('resize', updateNavbarColor);
-    updateNavbarColor();
+    updateNavbarColor(); // Run on page load
 });

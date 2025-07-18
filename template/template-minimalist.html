@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Template Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --min-bg: #ffffff; --min-text: #6b7280; --min-dark: #111827; }
+        body { margin: 0; font-family: 'Roboto', sans-serif; background-color: var(--min-bg); color: var(--min-text); }
+        .mock-container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+        .mock-nav { padding: 1rem; border-bottom: 1px solid #f3f4f6; display: flex; justify-content: space-between; align-items: center; }
+        .mock-nav .logo { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--min-dark); }
+        .mock-nav .links { display: flex; gap: 1.5rem; color: var(--min-dark); font-weight: 500; }
+        .mock-hero { padding: 7rem 1rem; text-align: center; }
+        .mock-hero h1 { font-family: 'Oswald', sans-serif; font-size: 3.5rem; color: var(--min-dark); margin: 0 0 1rem 0; font-weight: 700; }
+        .mock-hero p { font-size: 1.2rem; max-width: 50ch; margin: 0 auto 2rem auto; }
+        .mock-button { display: inline-block; background-color: var(--min-dark); color: var(--min-bg); padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 500; }
+        .mock-content { padding: 4rem 0; background-color: #f9fafb; }
+        .mock-content h2 { font-family: 'Oswald', sans-serif; text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--min-dark); }
+        .mock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .mock-grid-item { text-align: center; }
+        .mock-grid-item img { height: 40px; margin-bottom: 1rem; }
+        .mock-grid-item h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--min-dark); }
+        .mock-footer { background-color: var(--min-dark); color: #a0a0a0; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <nav class="mock-nav"><div class="mock-container"><div class="logo">Simple Logic</div><div class="links"><span>Features</span><span>Pricing</span><span>Sign Up</span></div></div></nav>
+    <main>
+        <section class="mock-hero">
+            <div class="mock-container"><h1>Software, Simplified.</h1><p>Elegant solutions for complex problems, designed to streamline your workflow and boost productivity.</p><a href="#" class="mock-button">Get Started Free</a></div>
+        </section>
+        <section class="mock-content">
+            <div class="mock-container"><h2>Core Features</h2><div class="mock-grid"><div class="mock-grid-item">
+                <img src="../images/computer-icon.svg" alt="Icon"><h3>Responsive Design</h3><p>Works flawlessly on desktop, tablet, and mobile devices.</p></div><div class="mock-grid-item">
+                <img src="../images/shield-icon.svg" alt="Icon"><h3>Ironclad Security</h3><p>Your data is protected with industry-leading security protocols.</p></div><div class="mock-grid-item">
+                <img src="../images/memory-icon.svg" alt="Icon"><h3>Blazing Fast</h3><p>Optimized for speed to keep your users engaged and happy.</p></div></div></div>
+        </section>
+    </main>
+    <footer class="mock-footer"><div class="mock-container"><p>© 2025 Simple Logic | A Kore Web Dynamics Design</p></div></footer>
+</body>
+</html>

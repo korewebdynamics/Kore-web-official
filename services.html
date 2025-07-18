@@ -6,6 +6,12 @@
     <meta name="description" content="Kore Web Dynamics - Affordable hosting plans, web development, app development, and SEO services for small businesses in Springfield, Missouri.">
     <meta name="keywords" content="web hosting, software development, web design, Springfield Missouri, small business, SEO, app development">
     <title>Kore Web Dynamics - Services</title>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="favicon_io/favicon.ico">
     <link rel="stylesheet" href="CSS/styles.css">
@@ -31,17 +37,18 @@
                     <li class="menu-item" role="menuitem">
                         <a href="index.html" class="menu-link" aria-label="Home page">Home</a>
                         <ul class="submenu" role="menu">
-                            <li role="none"><a href="index.html#hero" class="submenu-link" role="menuitem">Welcome</a></li>
+                            <li role="none"><a href="index.html#home" class="submenu-link" role="menuitem">Welcome</a></li>
                             <li role="none"><a href="index.html#Main" class="submenu-link" role="menuitem">Overview</a></li>
                         </ul>
                     </li>
                     <li class="menu-item" role="menuitem">
                         <a href="services.html" class="menu-link" aria-label="Services page">Services</a>
                         <ul class="submenu" role="menu">
+                            <li role="none"><a href="services.html#host" class="submenu-link" role="menuitem">Hosting Plans</a></li>
                             <li role="none"><a href="services.html#web" class="submenu-link" role="menuitem">Web Development</a></li>
                             <li role="none"><a href="services.html#app" class="submenu-link" role="menuitem">App Development</a></li>
                             <li role="none"><a href="services.html#seo" class="submenu-link" role="menuitem">SEO & Marketing</a></li>
-                            <li role="none"><a href="services.html#host" class="submenu-link" role="menuitem">Hosting Plans</a></li>
+                            <li role="none"><a href="services.html#ai" class="submenu-link" role="menuitem">AI Integration</a></li>
                         </ul>
                     </li>
                     <li class="menu-item" role="menuitem">
@@ -79,263 +86,377 @@
         </nav>
     </header>
     
-    <main>
+<main>
+   
+    <section class="service-header-section" aria-labelledby="service-header-title">
+        <div class="container">
+            <h1 id="service-header-title">Digital Solutions, Built For Missouri Businesses</h1>
+            <p class="service-header-subtitle">From a secure home for your website to intelligent AI assistants, our services are engineered to help your local business thrive online.</p>
+        </div>
+    </section>
 
-        <section class="hosting-intro-section" aria-labelledby="hosting-intro-title">
-            <div class="container">
-                <h2 id="hosting-intro-title" class="section-title">What is Hosting and Why You Need It?</h2>
-                <div class="hosting-intro-card">
-                    <p class="hosting-intro-text">Web hosting is the service that makes your website accessible on the internet by storing its files on a server. Here’s why it’s essential for your business:</p>
-                    <div class="hosting-intro-list">
-                        <ul>
-                            <li><span class="feature-icon"><img src="images/computer-icon.svg" alt="Computer icon" width="20" height="20"/></span><strong>Online Presence:</strong> Hosting ensures your website is available 24/7 to customers worldwide.</li>
-                            <li><span class="feature-icon"><img src="images/shield-icon.svg" alt="Shield icon" width="20" height="20"/></span><strong>Security:</strong> Quality hosting includes SSL certificates and maintenance to protect your site and users.</li>
-                            <li><span class="feature-icon"><img src="images/memory-icon.svg" alt="Memory icon" width="20" height="20"/></span><strong>Performance:</strong> Fast servers with adequate memory ensure quick load times, improving user experience.</li>
-                            <li><span class="feature-icon"><img src="images/seo-icon.svg" alt="Search icon" width="20" height="20"/></span><strong>SEO Benefits:</strong> Reliable hosting with uptime guarantees boosts your search engine rankings.</li>
-                        </ul>
-                    </div>
-                    <div class="button-container">
-                        <a href="contact.html#form" class="plan-button">Get Started with Hosting</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-         <section class="pay-for-hosting-section" aria-labelledby="pay-for-hosting-title">
-            <div class="container">
-                <h2 id="pay-for-hosting-title" class="section-title">Do I Have to Pay for Hosting?</h2>
-                <div class="hosting-intro-card">
-                    <p class="hosting-intro-text">While there are free hosting options, paid hosting is often necessary for a professional, reliable website. Here’s why:</p>
-                    <div class="pay-for-hosting-list">
-                        <ul>
-                            <li><span class="feature-icon"><img src="images/verified-icon.svg" alt="Checkmark icon" width="20" height="20"/></span><strong>Essential for Websites:</strong>  Paid hosting ensures your website is accessible, fast, and secure, critical for businesses needing a strong online presence.</li>
-                            <li><span class="feature-icon"><img src="images/verified-icon.svg" alt="Checkmark icon" width="20" height="20"/></span><strong>Free Hosting Limitations:</strong>  Free services like GitHub Pages offer limited bandwidth, storage, or custom domains, often with ads that harm your brand.</li>
-                            <li><span class="feature-icon"><img src="images/verified-icon.svg" alt="Checkmark icon" width="20" height="20"/></span><strong>Enhanced Features:</strong>  Paid plans provide unlimited bandwidth, free SSL certificates, and 24/7 support for better performance.</li>
-                            <li><span class="feature-icon"><img src="images/verified-icon.svg" alt="Checkmark icon" width="20" height="20"/></span><strong>Our Value:</strong>  Our plans start at $25.99/month, including free SSL, cPanel access, and flexible upgrades for Missouri businesses.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-       <section class="hosting-prices-section" aria-labelledby="hosting-prices-title">
-            <div class="container">
-                <h2 id="hosting-prices-title" class="section-title">What Are Normal Prices for Hosting with Other Companies?</h2>
-                <div class="hosting-intro-card">
-                    <p class="hosting-intro-text">Competitors often lure with low prices but charge high for marketing essentials, unlike our all-inclusive plans at Kore Web Dynamics:</p>
-                    <div class="hosting-prices-list">
-                        <ul>
-                            <li><span class="feature-icon"><img src="images/host-icon.svg" alt="Host icon" width="20" height="20"/></span><strong>GoDaddy Basic Hosting:</strong> <span>Starts at $4.99/month, renews at $25/month, limited to one website with no free SSL.</span></li>
-                            <li><span class="feature-icon"><img src="images/host-icon.svg" alt="Host icon" width="20" height="20"/></span><strong>SSL Certificates:</strong> <span>Up to $199.99/year for a single site (e.g., GoDaddy), while we include unlimited SSLs free.</span></li>
-                            <li><span class="feature-icon"><img src="images/host-icon.svg" alt="Host icon" width="20" height="20"/></span><strong>Bluehost SEO Tools:</strong> <span>$49.99/month add-on for basic SEO, unlike our integrated SEO starting at $35.99/month.</span></li>
-                            <li><span class="feature-icon"><img src="images/host-icon.svg" alt="Host icon" width="20" height="20"/></span><strong>Hostinger Premium:</strong> <span>$2.99/month introductory, renews at $15.99/month, with paid domain privacy and limited marketing tools.</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-        
-      <section id="host" class="host-section" aria-labelledby="host-title">
+    <section class="quick-nav-section" aria-label="Services Quick Navigation">
     <div class="container">
-        <h2 id="host-title" class="section-title">Hosting Plans</h2>
-        <div class="plan-grid">
-            <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Discount Plan">
-                <div class="plan-card" data-animation="slide-left">
-                    <h3 class="plan-title">Discount Plan</h3>
-                    <p class="plan-price">$15.99<span class="plan-price-unit">/month</span></p>
-                    <p class="plan-description">For churches, non-profits & community services</p>
-                    <ul class="plan-features">
-                        <li><span class="feature-icon"><img src="images/computer-icon.svg" alt="Computer icon" width="20" height="20"/></span>1 Website</li>
-                        <li><span class="feature-icon"><img src="images/shield-icon.svg" alt="Shield icon" width="20" height="20"/></span>1 SSL Certificate</li>
-                        <li><span class="feature-icon"><img src="images/memory-icon.svg" alt="Memory icon" width="20" height="20"/></span>2GB Memory</li>
-                        <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt="Computer icon" width="20" height="20"/></span>cPanel Access</li>
-                        <li><span class="feature-icon"><img src="images/security-icon.svg" alt="Security icon" width="20" height="20"/></span>Security & Maintenance Updates</li>
-                    </ul>
-                </div>
-            </a>
-            <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Bronze Plan">
-                <div class="plan-card" data-animation="slide-right">
-                    <h3 class="plan-title">Bronze Plan</h3>
-                    <p class="plan-price">$25.99<span class="plan-price-unit">/month</span></p>
-                    <p class="plan-description">Perfect for LLC business</p>
-                    <ul class="plan-features">
-                        <li><span class="feature-icon"><img src="images/computer-icon.svg" alt="Computer icon" width="20" height="20"/></span>Unlimited Websites</li>
-                        <li><span class="feature-icon"><img src="images/shield-icon.svg" alt="Shield icon" width="20" height="20"/></span>Unlimited SSL Certificates</li>
-                        <li><span class="feature-icon"><img src="images/memory-icon.svg" alt="Memory icon" width="20" height="20"/></span>2GB Memory</li>
-                        <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt="Computer icon" width="20" height="20"/></span>cPanel Access</li>
-                        <li><span class="feature-icon"><img src="images/security-icon.svg" alt="Security icon" width="20" height="20"/></span>Security & Maintenance Updates</li>
-                    </ul>
-                </div>
-            </a>
-            <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Gold Plan">
-                <div class="plan-card" data-animation="slide-left">
-                    <h3 class="plan-title">Gold Plan</h3>
-                    <p class="plan-price">$35.99<span class="plan-price-unit">/month</span></p>
-                    <p class="plan-description">Business wanting to take a step into SEO</p>
-                    <ul class="plan-features">
-                        <li><span class="feature-icon"><img src="images/computer-icon.svg" alt="Computer icon" width="20" height="20"/></span>Unlimited Websites</li>
-                        <li><span class="feature-icon"><img src="images/shield-icon.svg" alt="Shield icon" width="20" height="20"/></span>Unlimited SSL Certificates</li>
-                        <li><span class="feature-icon"><img src="images/memory-icon.svg" alt="Memory icon" width="20" height="20"/></span>4GB Memory</li>
-                        <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt="Computer icon" width="20" height="20"/></span>cPanel Access</li>
-                        <li><span class="feature-icon"><img src="images/security-icon.svg" alt="Security icon" width="20" height="20"/></span>Security & Maintenance Updates</li>
-                        <li><span class="feature-icon"><img src="images/seo-icon.svg" alt="Search icon" width="20" height="20"/></span>SEO Keyword Updates</li>
-                    </ul>
-                </div>
-            </a>
-            <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for Platinum Plan">
-                <div class="plan-card platinum-card" data-animation="slide-left">
-                    <h3 class="plan-title">Platinum Plan</h3>
-                    <p class="plan-price">$59.99<span class="plan-price-unit">/month</span></p>
-                    <p class="plan-description">All In One Plan</p>
-                    <ul class="plan-features">
-                        <li><span class="feature-icon"><img src="images/computer-icon.svg" alt="Computer icon" width="20" height="20"/></span>Unlimited Websites</li>
-                        <li><span class="feature-icon"><img src="images/shield-icon.svg" alt="Shield icon" width="20" height="20"/></span>Unlimited SSL Certificates</li>
-                        <li><span class="feature-icon"><img src="images/memory-icon.svg" alt="Memory icon" width="20" height="20"/></span>10GB Memory</li>
-                        <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt="Computer icon" width="20" height="20"/></span>cPanel Access</li>
-                        <li><span class="feature-icon"><img src="images/security-icon.svg" alt="Security icon" width="20" height="20"/></span>Security & Maintenance Updates</li>
-                        <li><span class="feature-icon"><img src="images/seo-icon.svg" alt="Search icon" width="20" height="20"/></span>Advanced SEO Keyword Updates</li>
-                        <li><span class="feature-icon"><img src="images/application-icon.svg" alt="Computer icon" width="20" height="20"/></span>Monthly Website Updates</li>
-                        <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt="Computer icon" width="20" height="20"/></span>Personal Web Developer (up to 5 hours)</li>
-                        <li><span class="feature-icon"><img src="images/verified-icon.svg" alt="Plus icon" width="20" height="20"/></span>*Perfect for monthly content changes or theme updates</li>
-                    </ul>
-                </div>
-            </a>
-            <a href="contact.html#form" class="plan-card-link" aria-label="Contact us for domain name services">
-                <div class="plan-card domain-card" data-animation="slide-up">
-                    <h3 class="plan-title">Domain Names</h3>
-                    <p class="plan-price">$20.00<span class="plan-price-unit">/year</span></p>
-                    <p class="plan-description">Rent or transfer your existing domain name with ease.</p>
-                    <p class="domain-note">*Hosting clients can upgrade to the Platinum Plan on a month-by-month basis for additional features or changes without committing to a full-year plan.</p>
-                    <div class="button-container">
-                        <span class="plan-button">Contact Us</span>
+        <nav class="quick-nav-buttons">
+            <a href="#host" class="quick-nav-button">Hosting</a>
+            <a href="#web" class="quick-nav-button">Web Development</a>
+            <a href="#app" class="quick-nav-button">App Development</a>
+            <a href="#seo" class="quick-nav-button">SEO & Marketing</a>
+            <a href="#ai" class="quick-nav-button">AI Integration</a>
+        </nav>
+    </div>
+</section>
+
+
+    
+    <section class="hosting-intro-section" aria-labelledby="hosting-intro-title" id="host">
+        <div class="container">
+            <h2 id="hosting-intro-title" class="section-title">What is Hosting & Why Is It Crucial?</h2>
+            <div class="hosting-intro-card service-card-animate">
+                <p class="hosting-intro-text">Think of web hosting as the plot of land where your website lives. It's the essential service that stores all your website's files, code, and data on a secure server, making it accessible to visitors 24/7 across the globe. Without reliable hosting, your business simply cannot exist online.</p>
+                <div class="hosting-intro-grid">
+                    <div>
+                        <span class="feature-icon"><img src="images/computer-icon.svg" alt="Computer icon"/></span>
+                        <strong>Global Presence</strong>
+                        <p>Ensures your website is always online and available to customers, day or night.</p>
+                    </div>
+                    <div>
+                        <span class="feature-icon"><img src="images/shield-icon.svg" alt="Shield icon"/></span>
+                        <strong>Data Security</strong>
+                        <p>Protects your business and visitor data with security protocols, including free SSL certificates.</p>
+                    </div>
+                    <div>
+                        <span class="feature-icon"><img src="images/memory-icon.svg" alt="Memory icon"/></span>
+                        <strong>Peak Performance</strong>
+                        <p>A fast server means a fast-loading website, which is critical for keeping users engaged.</p>
+                    </div>
+                    <div>
+                        <span class="feature-icon"><img src="images/seo-icon.svg" alt="Search icon"/></span>
+                        <strong>SEO Advantage</strong>
+                        <p>Search engines like Google favor fast, reliable, and secure websites, boosting your rankings.</p>
                     </div>
                 </div>
-            </a>
-            <a href="about.html" class="plan-card-link" aria-label="Contact us to learn more">
-                <div class="plan-card comparison-card" data-animation="slide-up">
-                    <h3 class="plan-title">Why Choose Us?</h3>
-                    <p class="plan-description">Unlike competitors like GoDaddy and Hostinger, we provide unmatched value and support:</p>
-                    <ul class="plan-features">
-                        <li><span class="feature-icon"><img src="images/plus-icon.svg" alt="Plus icon" width="20" height="20"/></span>Fair, all-inclusive pricing with no hidden fees or price hikes</li>
-                        <li><span class="feature-icon"><img src="images/plus-icon.svg" alt="plus icon" width="20" height="20"/></span>Unique personal web developer support (up to 5 hours monthly in Platinum Plan)</li>
-                        <li><span class="feature-icon"><img src="images/plus-icon.svg" alt="Plus icon" width="20" height="20"/></span>Flexible month-to-month upgrades for hosting plans</li>
-                        <li><span class="feature-icon"><img src="images/plus-icon.svg" alt="Plus icon" width="20" height="20"/></span>Local expertise tailored for Missouri businesses</li>
-                        <li><span class="feature-icon"><img src="images/plus-icon.svg" alt="plus icon" width="20" height="20"/></span>Comprehensive services including hosting, SSL, SEO, and maintenance</li>
-                        <li><span class="feature-icon"><img src="images/plus-icon.svg" alt="Plus icon" width="20" height="20"/></span>Scalable solutions to grow with your business needs</li>
-                    </ul>
-                    <div class="button-container">
-                        <span class="plan-button">Learn More</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Hosting Plans -->
+    <section class="host-section" aria-labelledby="host-title">
+        <div class="container">
+            <h2 id="host-title" class="section-title">Our Hosting Plans</h2>
+            <div class="plan-grid">
+                <a href="contact.html#form" class="plan-card-link">
+                    <div class="plan-card service-card-animate">
+                        <h3 class="plan-title">Discount Plan</h3>
+                        <p class="plan-price">$15.99<span class="plan-price-unit">/mo</span></p>
+                        <p class="plan-description">For churches & non-profits</p>
+                        <ul class="plan-features">
+                            <li><span class="feature-icon"><img src="images/computer-icon.svg" alt=""/></span>1 Website</li>
+                            <li><span class="feature-icon"><img src="images/shield-icon.svg" alt=""/></span>1 SSL Certificate</li>
+                            <li><span class="feature-icon"><img src="images/memory-icon.svg" alt=""/></span>2GB Memory</li>
+                            <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt=""/></span>cPanel Access</li>
+                            <li><span class="feature-icon"><img src="images/security-icon.svg" alt=""/></span>Security & Maintenance</li>
+                            <li><span class="feature-icon"><img src="images/email-icon.svg" alt=""/></span>1 Custom Domain Email</li>
+                        </ul>
+                         <span class="plan-button">Get Started</span>
+                    </div>
+                </a>
+                <a href="contact.html#form" class="plan-card-link">
+                    <div class="plan-card service-card-animate" style="--animation-delay: 0.1s;">
+                        <h3 class="plan-title">Bronze Plan</h3>
+                        <p class="plan-price">$25.99<span class="plan-price-unit">/mo</span></p>
+                        <p class="plan-description">Perfect for small businesses</p>
+                        <ul class="plan-features">
+                            <li><span class="feature-icon"><img src="images/computer-icon.svg" alt=""/></span>Unlimited Websites</li>
+                            <li><span class="feature-icon"><img src="images/shield-icon.svg" alt=""/></span>Unlimited SSL Certificates</li>
+                            <li><span class="feature-icon"><img src="images/memory-icon.svg" alt=""/></span>2GB Memory</li>
+                            <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt=""/></span>cPanel Access</li>
+                            <li><span class="feature-icon"><img src="images/security-icon.svg" alt=""/></span>Security & Maintenance</li>
+                            <li><span class="feature-icon"><img src="images/email-icon.svg" alt=""/></span>1 Custom Domain Email</li>
+                        </ul>
+                        <span class="plan-button">Get Started</span>
+                    </div>
+                </a>
+                <a href="contact.html#form" class="plan-card-link">
+                    <div class="plan-card service-card-animate" style="--animation-delay: 0.2s;">
+                        <h3 class="plan-title">Gold Plan</h3>
+                        <p class="plan-price">$35.99<span class="plan-price-unit">/mo</span></p>
+                        <p class="plan-description">For businesses ready for SEO</p>
+                        <ul class="plan-features">
+                           <li><span class="feature-icon"><img src="images/computer-icon.svg" alt=""/></span>Unlimited Websites</li>
+                            <li><span class="feature-icon"><img src="images/shield-icon.svg" alt=""/></span>Unlimited SSL Certificates</li>
+                            <li><span class="feature-icon"><img src="images/memory-icon.svg" alt=""/></span>4GB Memory</li>
+                            <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt=""/></span>cPanel Access</li>
+                            <li><span class="feature-icon"><img src="images/security-icon.svg" alt=""/></span>Security & Maintenance</li>
+                            <li><span class="feature-icon"><img src="images/seo-icon.svg" alt=""/></span>SEO Keyword Updates</li>
+                            <li><span class="feature-icon"><img src="images/email-icon.svg" alt=""/></span>5 Custom Domain Emails</li>
+                        </ul>
+                        <span class="plan-button">Get Started</span>
+                    </div>
+                </a>
+                <a href="contact.html#form" class="plan-card-link">
+                    <div class="plan-card platinum-card service-card-animate" style="--animation-delay: 0.3s;">
+                        <h3 class="plan-title">Platinum Plan</h3>
+                        <p class="plan-price">$59.99<span class="plan-price-unit">/mo</span></p>
+                        <p class="plan-description">The all-in-one growth solution</p>
+                        <ul class="plan-features">
+                            <li><span class="feature-icon"><img src="images/computer-icon.svg" alt=""/></span>Unlimited Websites</li>
+                            <li><span class="feature-icon"><img src="images/shield-icon.svg" alt=""/></span>Unlimited SSL Certificates</li>
+                            <li><span class="feature-icon"><img src="images/memory-icon.svg" alt=""/></span>10GB Memory</li>
+                            <li><span class="feature-icon"><img src="images/computer2-icon.svg" alt=""/></span>cPanel Access</li>
+                            <li><span class="feature-icon"><img src="images/security-icon.svg" alt=""/></span>Security & Maintenance</li>
+                            <li><span class="feature-icon"><img src="images/seo-icon.svg" alt=""/></span>Advanced SEO Updates</li>
+                            <li><span class="feature-icon"><img src="images/email-icon.svg" alt=""/></span>Unlimited Emails</li>
+                            <li><span class="feature-icon"><img src="images/application-icon.svg" alt=""/></span>Monthly Website Updates</li>
+                            <li><span class="feature-icon"><img src="images/verified-icon.svg" alt=""/></span>Personal Developer (5hr/mo)</li>
+                        </ul>
+                         <span class="plan-button">Get Started</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="other-services" class="other-services-section" aria-labelledby="other-services-title">
+        <div class="container" id="web">
+            <h2 id="other-services-title" class="section-title">Development & Growth Services</h2>
+            
+            
+            <section class="web-dev-section" aria-labelledby="web-dev-title">
+                <div id="web-dev-banner" class="web-dev-banner service-card-animate">
+                    <img src="images/services-page-image.jpg" alt="A scenic Missouri landscape representing creative design possibilities.">
+                    <h2 id="banner-typewriter" class="banner-text"></h2>
+                </div>
+                <div class="web-dev-card service-card-animate" style="--animation-delay: 0.2s;">
+                    <p class="web-dev-intro-text">
+                        Your website is your digital storefront. We build custom solutions from the ground up to ensure it perfectly represents your brand and meets your business goals. Our process is collaborative and transparent, designed to bring your vision to life.
+                    </p>
+                    <div class="web-dev-grid">
+                        <div>
+                            <span class="feature-icon"><img src="images/consult-icon.svg" alt=""/></span>
+                            <strong>1. Consultation & Discovery</strong>
+                            <p>We start with a conversation to understand your vision, goals, and target audience. We'll gather your logos, color schemes, and any media you want to feature.</p>
+                        </div>
+                        <div>
+                            <span class="feature-icon"><img src="images/pricing-icon.svg" alt=""/></span>
+                            <strong>2. Strategy & Transparent Pricing</strong>
+                            <p>Based on your needs, we create a clear strategy. All pricing is determined on a job-by-job basis, ensuring you only pay for the features you require.</p>
+                        </div>
+                        <div>
+                            <span class="feature-icon"><img src="images/code-icon.svg" alt=""/></span>
+                            <strong>3. Design & Development</strong>
+                            <p>Fluent in WordPress and custom code, we build your responsive, fast, and secure website. We handle everything from simple pages to complex backend functionality.</p>
+                        </div>
+                        <div>
+                            <span class="feature-icon"><img src="images/launch-icon.svg" alt=""/></span>
+                            <strong>4. Review & Launch</strong>
+                            <p>We present the final site for your approval. After making final tweaks, we launch your new website, making it live for the world to see and ensuring it performs flawlessly.</p>
+                        </div>
+                    </div>
+                    <div class="special-offer-box">
+                        <h3>Small Business Starter Deal</h3>
+                        <p>Get a professional, 3-page website for just <strong>$149.99</strong> when you pair it with any of our hosting plans. It's the perfect, affordable way to get your foot in the tech world.</p>
+                        <a href="templates.html" class="plan-button offer-button">See Template Options</a>
+                    </div>
+                    <div class="final-cta">
+                        <p>Ready for a website that truly works for you? We're flexible and ready to build what you need.</p>
+                        <a href="contact.html#form" class="plan-button">Let's Build It</a>
                     </div>
                 </div>
-            </a>
+            </section>
+
+            <section class="parallax-break" role="img" aria-label="Abstract background image showing mobile app code.">
+    
+            </section>
+
+            
+          <section id="app" class="app-dev-section" aria-labelledby="app-dev-title">
+            <div class="container">
+                <h2 id="app-dev-title" class="section-title">Mobile App Development Process</h2>
+                <div class="app-dev-card service-card-animate">
+            <p class="app-dev-intro-text">
+                Put your business directly in your customers' pockets. We build powerful, cross-platform mobile apps using React Native, allowing you to reach users on both iOS and Android with a single, efficient codebase.
+            </p>
+            <div class="app-dev-grid">
+                
+                <div>
+                    <span class="feature-icon"><img src="images/strategy-icon.svg" alt=""/></span>
+                    <strong>1. Strategy & Vision</strong>
+                    <p>Our process begins with an in-depth meeting to define the app's core purpose, target features, and user flow. We'll collect your brand assets like logos and colors to ensure a cohesive design.</p>
+                </div>
+                
+                <div>
+                    <span class="feature-icon"><img src="images/prototype-icon.svg" alt=""/></span>
+                    <strong>2. UI/UX & Prototyping</strong>
+                    <p>We design an intuitive user interface (UI) and user experience (UX). You'll receive an interactive prototype, allowing you to click through and feel the app before we write a single line of code.</p>
+                </div>
+                
+                <div>
+                     <span class="feature-icon"><img src="images/app-code-icon.svg" alt=""/></span>
+                    <strong>3. Development & Testing</strong>
+                    <p>This is where the vision comes to life. We build the app's functionality and backend systems, followed by rigorous testing on multiple devices to ensure a smooth, bug-free experience.</p>
+                </div>
+                
+                <div>
+                     <span class="feature-icon"><img src="images/deploy-icon.svg" alt=""/></span>
+                    <strong>4. Deployment & Support</strong>
+                    <p>We handle the entire submission process for the Apple App Store and Google Play Store. After launch, we provide ongoing support to ensure your app remains up-to-date and effective.</p>
+                </div>
+            </div>
+
+            
+            <div class="timeline-box">
+                <h3>Timeline & Investment</h3>
+                <p>Mobile apps are labor-intensive projects. As a solo developer dedicated to quality, a typical project timeline is <strong>3-6 months</strong>. Pricing is flexible and quoted on a per-job basis to fit the unique needs of your business.</p>
+            </div>
+            
+            
+            <div class="final-cta">
+                 <p>Have an idea for an app that could change your business? Let's talk.</p>
+                 <a href="contact.html#form" class="plan-button">Start the Conversation</a>
+            </div>
         </div>
     </div>
 </section>
 
- <section class="separator-section" aria-label="Section separator">
-            <div class="container">
-                <img src="images/website-landscape.jpg" alt="Separator image between hosting and services sections" class="separator-image">
-            </div>
-</section>
+            
+ <div id="seo" class="service-detail-card service-card-animate">
+    <div class="service-detail-content">
+        <h2>Marketing</h2>
         
+        <div class="seo-content-wrapper">
+            
+            <div class="seo-qa-block">
+                <h3>What is SEO?</h3>
+                <p>Search Engine Optimization (SEO) is the process of strategically improving your website's visibility on search engines like Google. It involves optimizing your site's structure, content, and keywords so that when local customers in Missouri search for services you offer, your business appears at the top of the results.</p>
+            </div>
+            
+            <div class="seo-qa-block">
+                <h3>Is SEO a quick process?</h3>
+                <p>No, effective SEO is an ongoing marathon, not a sprint. It involves continuous effort to compete with other local businesses for the best keywords, fastest loading speeds, and highest rankings. A consistent, long-term strategy is the key to building and maintaining a strong online presence.</p>
+            </div>
+            
+            <div class="seo-qa-block">
+                <h3>Is SEO expensive?</h3>
+                <p>It doesn't have to be! We specialize in creating affordable strategies for small businesses. Whether you need foundational long-term changes or a flexible month-to-month plan, we work within your budget. We also leverage powerful, cost-effective tools like Google and Facebook Ads to accelerate your reach.</p>
+            </div>
+        </div>
+        
+        <p class="seo-summary">Our goal is to launch your brand to the top of search results. We increase your organic visibility to drive qualified traffic and provide clear analytics to track your growth and return on investment.</p>
+        <a href="contact.html#form" class="plan-button">Improve My Ranking</a>
+    </div>
+    <div class="service-detail-visual">
+        <img src="images/computer-image1.jpg" alt="A dashboard showing graphs and metrics for an SEO and digital marketing campaign.">
+    </div>
+</div>       
 
-        <section id="services" class="services-section" aria-labelledby="services-title">
-            <div class="container">
-                <h2 id="services-title" class="section-title"></h2>
-                <div class="web-section">
-                    <div class="services-grid">
-                        <div class="plan-card service-card web-card"  id="web">
-                            <h2 id="web-title" class="section-title">Web Development</h2>
-                            <p class="section-text">Custom websites for any size business at <strong>affordable prices</strong>.</p>
-                            <div class="web-lists-grid">
-                                <div class="web-list-container">
-                                    <h3 id="web-services" class="card-title"><strong>Our Services</strong></h3>
-                                    <ul class="web-list"><br>
-                                        <li>Website Design (WordPress or Custom)</li>
-                                        <li>Responsive Design for All Devices</li>
-                                        <li>E-commerce Solutions</li>
-                                        <li>SEO-Optimized Websites</li>
-                                        <li>API Work</li>
-                                        <li>Complicated Back-end Tasks</li>
-                                    </ul>
-                                </div>
-                                <div class="web-list-container">
-                                    <h3 id="web-features" class="card-title"><strong>Key Features</strong></h3>
-                                    <ul class="web-list"><br>
-                                        <li>AI Chatbots</li>
-                                        <li>Custom Code</li>
-                                        <li>Email Services</li>
-                                        <li>3D Visuals and Animations</li>
-                                        <li>Secure Login Systems</li>
-                                        <li>*More Features Available</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+ <section class="parallax-break2" role="img" aria-label="Abstract background image showing mobile app code.">
+    
+</section>
+
+<section id="ai" class="ai-dev-section" aria-labelledby="ai-dev-title">
+    <div class="container">
+        <div class="ai-dev-card service-card-animate">
+            <div class="ai-dev-content">
+                <h2 id="ai-dev-title">AI Integration: Your 24/7 Digital Employee</h2>
+                <p class="ai-dev-intro-text">
+                    Unlock the power of automation with a custom AI assistant, powered by Google's advanced API. We integrate intelligent chatbots directly into your website to handle tasks, engage customers, and capture leads while you focus on running your business.
+                </p>
+                <div class="ai-features-grid">
+                    
+                    <div>
+                        <span class="feature-icon"><img src="images/lead-gain-icon.svg" alt=""/></span>
+                        <strong>Capture Leads 24/7</strong>
+                        <p>Your AI never sleeps. It can qualify potential customers and collect contact information day or night, ensuring you never miss an opportunity.</p>
                     </div>
-                </div>
-                <div class="sub-services-section">
-                    <div class="services-subgrid">
-                        <div class="plan-card service-card" data-animation="slide-right" id="app">
-                            <h2 id="app-title" class="section-title">Mobile App Development</h2>
-                            <p class="section-text">Custom mobile apps built with React Native and TypeScript for seamless performance across iOS and Android.</p>
-                            <ul class="service-list">
-                                <li>Cross-Platform Apps with React Native</li>
-                                <li>TypeScript for Scalable Code</li>
-                                <li>Custom UI/UX Design</li>
-                                <li>App Store Deployment</li>
-                                <li>*Work Closely with Clients</li>
-                            </ul>
-                        </div>
-                        <div class="plan-card service-card" data-animation="slide-left" id="seo">
-                            <h2 id="seo-title" class="section-title">SEO & Marketing</h2>
-                            <p class="section-text">Boost your online presence with targeted SEO and marketing strategies for better visibility and engagement.</p>
-                            <ul class="service-list">
-                                <li>Google & Facebook Ads Setup</li>
-                                <li>Canva-Designed Ad Creatives</li>
-                                <li>Keyword Updates for Google Ranking</li>
-                                <li>Website Optimization</li>
-                                <li>Targeted Plan to Improve Rankings</li>
-                                <li>Analytics Setup & Monitoring</li>
-                            </ul>
-                        </div>
+                    
+                    <div>
+                        <span class="feature-icon"><img src="images/support-icon.svg" alt=""/></span>
+                        <strong>Instant Customer Support</strong>
+                        <p>Answer frequently asked questions about your hours, services, and pricing instantly, freeing up your phone lines and your time.</p>
                     </div>
                    
+                    <div>
+                         <span class="feature-icon"><img src="images/schedule-icon.svg" alt=""/></span>
+                        <strong>Automate Scheduling</strong>
+                        <p>Allow clients to book appointments or consultations directly through the chat, seamlessly integrating with your calendar.</p>
+                    </div>
+                   
+                    <div>
+                         <span class="feature-icon"><img src="images/insights-icon.svg" alt=""/></span>
+                        <strong>Gain Valuable Insights</strong>
+                        <p>Discover what your customers are asking for most. Your AI can track common inquiries, helping you make smarter business decisions.</p>
+                    </div>
+                </div>
+
+               
+                <div class="chatbot-promo-box">
+                    <h3>Meet Korey: Test Our AI Live!</h3>
+                    <p>Want to see our AI in action? The "Chat with Us!" button on this page is powered by our custom AI, Korey. Ask him about our services or pricing to get a firsthand feel for the experience.</p>
+                </div>
+                
+                
+                <div class="final-cta">
+                     <p>Pricing is determined by the features you need, but we guarantee the most affordable AI integration around. Let's build your digital employee.</p>
+                     <a href="contact.html#form" class="plan-button">Get Your Custom Quote</a>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="ai-dev-visual">
+            <canvas id="chatbot-canvas"></canvas>
+    
+            <img src="images/ai-character-fallback.jpg" alt="A friendly, futuristic robot character representing the AI chatbot 'Korey'." class="ai-fallback-image">
+        </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </section>
+</main>
 
     <div class="chatbot" onclick="openChatbot()" aria-label="Open chatbot for assistance">Chat with Us!</div>
 
-    <div id="chatbot-modal" class="chatbot-modal" aria-hidden="true">
-        <div class="chatbot-content">
-            <button onclick="closeChatbot()" class="chatbot-close" aria-label="Close chatbot">
-                <svg class="chatbot-close-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+       <div id="chatbot-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" aria-hidden="true">
+        <div class="bg-white rounded-lg w-full max-w-md p-6 relative max-h-[80vh] overflow-y-auto">
+            <button onclick="closeChatbot()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" aria-label="Close chatbot">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
-            <h2 class="chatbot-title">Website Cost Estimator</h2>
-            <div id="chatbot-messages" class="chatbot-messages"></div>
-            <div class="chatbot-input-container">
-                <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Type your message..." aria-label="Chatbot input">
-                <button onclick="sendMessage()" class="chatbot-send" aria-label="Send message">Send</button>
+            <h2 class="text-2xl font-bold mb-4">Website Cost Estimator</h2>
+            <div id="chatbot-messages" class="mb-4"></div>
+            <div class="flex">
+                <input type="text" id="chatbot-input" class="flex-1 border rounded-l-lg p-2" placeholder="Type your message..." aria-label="Chatbot input">
+               
+                <button onclick="sendMessage()" class="bg-blue-600 text-white rounded-r-lg px-4 py-2 hover:bg-blue-700" aria-label="Send message">Send</button>
             </div>
         </div>
     </div>
 
-     <footer class="bg-blue-900 text-white py-6" role="contentinfo">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Kore Web Dynamics all rights reserved </p>
-            <p>Hosting | Website | SEO | Artifical Intelligence | Mobile Applications | Software Engineer</p>
-            <p>Missouri | Springfield | Bolivar | Joplin | Branson | Kansas City | St. Louis | Clinton</p>
-            <div class="footer-links flex justify-center space-x-4 mt-4">
-                <a href="policy.html" class="footer-link" aria-label="View our Privacy Policy">Privacy Policy</a>
+
+<footer class="bg-blue-900 text-white pt-10 pb-4" role="contentinfo">
+    <div class="container mx-auto px-4 text-sm">
+        <div class="mx-auto text-center space-y-4">
+            <div class="flex flex-col sm:flex-row justify-center items-center flex-wrap gap-x-4 gap-y-2">
+                <a href="mailto:admin@korewebdynamics.com" class="hover:underline">admin@korewebdynamics.com</a>
+                <span class="hidden sm:inline text-gray-500">|</span>
+                <span>Call: <a href="tel:4174887069" class="hover:underline">(417) 488-7069</a></span>
+                <span class="hidden sm:inline text-gray-500">|</span>
+                <span>Text: <a href="sms:4175999612" class="hover:underline">(417) 599-9612</a></span>
+            </div>
+            <div>
+                 <p class="text-gray-300">Hosting | Website | SEO | Artificial Intelligence | Mobile Applications | Software Engineer</p>
+                 <p class="text-gray-400 mt-1">Missouri | Springfield | Bolivar | Joplin | Branson | Kansas City | St. Louis | Clinton</p>
+            </div>
+            <div class="flex justify-center items-center flex-wrap gap-x-4">
+                <span>© 2025 Kore Web Dynamics LLC</span>
+                <span class="text-gray-500">|</span>
+                <a href="policy.html" class="hover:underline">Privacy Policy</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <div class="social-sticky">
     <div class="follow-button" aria-label="Show social media links">Follow us</div>
@@ -349,5 +470,6 @@
 </div>
 
     <script src="Javascript/script.js"></script>
+    <script src="Javascript/services-animation.js"></script>
 </body>
 </html>

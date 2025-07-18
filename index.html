@@ -16,7 +16,7 @@
 </head>
 <body class="bg-gray-100">
     
-    <header>
+    <header id="home">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="container mx-auto flex items-center justify-between px-4 py-2">
                 <a href="index.html" class="logo" aria-label="Go to Kore Web Dynamics homepage">
@@ -31,7 +31,7 @@
                     <li class="menu-item" role="menuitem">
                         <a href="index.html" class="menu-link" aria-label="Home page">Home</a>
                         <ul class="submenu" role="menu">
-                            <li role="none"><a href="index.html" class="submenu-link" role="menuitem">Welcome</a></li>
+                            <li role="none"><a href="index.html#home" class="submenu-link" role="menuitem">Welcome</a></li>
                             <li role="none"><a href="#Main" class="submenu-link" role="menuitem">Overview</a></li>
                         </ul>
                     </li>
@@ -42,6 +42,7 @@
                             <li role="none"><a href="services.html#web" class="submenu-link" role="menuitem">Web Development</a></li>
                             <li role="none"><a href="services.html#app" class="submenu-link" role="menuitem">App Development</a></li>
                             <li role="none"><a href="services.html#seo" class="submenu-link" role="menuitem">SEO & Marketing</a></li>
+                            <li role="none"><a href="services.html#AI" class="submenu-link" role="menuitem">AI integration</a></li>
                             
                         </ul>
                     </li>
@@ -87,9 +88,9 @@
             <canvas id="three-canvas" aria-hidden="true"></canvas>
             <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
                 <h1 id="hero-title" class="text-4xl md:text-6xl font-bold mb-4">Kore Web Dynamics</h1>
-                <p class="text-lg md:text-xl mb-6">Web | App | Mobile | SEO | Software</p>
-                <p class="text-lg md:text-xl mb-6">Empowering Small Businesses With Affordable Access to Technology</p>
-                <a href="subscribe.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" aria-label="Get started with our services">Get Started</a>
+                <p class="text-lg md:text-xl mb-6">Web | AI | Mobile | SEO | Software </p>
+                <p class="text-lg md:text-xl mb-6">Empowering Businesses With Affordable Access to Technology</p>
+                <a href="index.html#Main" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" aria-label="Get started with our services">Get Started</a>
                 <p class="caption-left text-white text-sm italic mt-6" style="position: absolute; right: 20px; top: 80%; transform: translateY(-50%);">Ask about our 3D website options if you like this space effect.</p>
             </div>
         </section>
@@ -106,7 +107,7 @@
                                 <h3>Hosting</h3>
                                 <p>Flexible plans<br>
                                 Fast | Reliable | Secured</p>
-                                <a href="#">Hosting Plans</a>
+                                <a href="services.html#host">Hosting Plans</a>
                             </div>
                         </div>
 
@@ -117,7 +118,7 @@
                                 <p>Dynamic Pricing<br>
                                     Affordable Websites to Get Your Business Online
                                 </p>
-                                <a href="#">Websites</a>
+                                <a href="services.html#web">Websites</a>
                             </div>
                         </div>
 
@@ -127,7 +128,7 @@
                                 <h3>Search Engine Optimization</h3>
                                 <p>Advertising | Keywords | Content<br>
                                 </p>
-                                <a href="#">Marketing</a>
+                                <a href="services.html#seo">Marketing</a>
                             </div>
                         </div>
 
@@ -138,56 +139,141 @@
 
       
 
-        <section id="intro-animation" class="py-12 bg-gray-900 text-white" aria-labelledby="intro-title">
-            <div class="container mx-auto px-4 text-center">
-                <h2 id="intro-title" class="text-3xl md:text-4xl font-bold mb-8">
-                    <span id="typewriter" class="inline-block"></span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="slide-card" style="--slide-delay: 0s;">
-                        <img src="images/code-1076536_640.jpg" alt="Web Development" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500">
+       <section id="ai-services" class="py-16 bg-white" aria-labelledby="ai-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h2 id="ai-title" class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+                        <span id="typewriter" class="inline-block"></span>
+                    </h2>
+                    <p class="max-w-3xl mx-auto text-gray-600 mb-12">
+                        Move beyond static websites. We integrate intelligent AI systems directly into your business to automate customer support, capture leads 24/7, and streamline your daily operations.
+                    </p>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    
+                    
+                    <div class="w-full md:w-1/2">
+                        <div class="ai-visual-container">
+                            
+                        </div>
                     </div>
-                    <div class="slide-card" style="--slide-delay: 0.2s;">
-                        <img src="images/mobile-devices-2017980_640.png" alt="App Development" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500">
-                    </div>
-                    <div class="slide-card" style="--slide-delay: 0.4s;">
-                        <img src="images/web-design-3411373_640.jpg" alt="SEO and Marketing" class="w-full h-48 object-cover rounded-lg transform transition-transform duration-500">
+
+                    
+                    <div class="w-full md:w-1/2 text-left space-y-8">
+                        
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-gray-800">24/7 Digital Employee</h3>
+                                <p class="text-gray-600 mt-1">Our AI chatbots act as a tireless first point of contact, answering common questions about your services, hours, and pricing instantly, ensuring you never miss a potential lead.</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-gray-800">Automate Routine Tasks</h3>
+                                <p class="text-gray-600 mt-1">Free up your team's valuable time. The AI can handle appointment scheduling, lead qualification, and data entry, allowing your staff to focus on more complex, high-value work.</p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-gray-800">Intelligent Business Insights</h3>
+                                <p class="text-gray-600 mt-1">Our system can analyze customer interactions to provide valuable insights. Discover what your customers are asking for most, identify new service opportunities, and make data-driven decisions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="services.html#AI" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105" aria-label="Learn more about our AI services">
+                                Explore AI Integration
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <br><br><br>
         </section>
 
        
 
         
-        <section class="py-12 bg-white" aria-labelledby="services-title" id="Main">
-            <div class="container mx-auto px-4">
-                <h2 id="services-title" class="text-3xl font-bold text-center mb-8">Our Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2"><img src="images/captive_portal_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Website Developement">Web Development
-                        </h3>
-                        <p>Custom websites with coding, wordpress and many other tools tailored for all size businesses and budgets. *AI features and mobile app development offered.</p>
-                    </div>
-                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2"><img src="images/database_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Database Icon">Hosting Plan</h3>
-                        <p>Easy transfer - Daily Security Checks - Cpanel Access - SSL - Monthly Maintenance Plans</p>
-                    </div>
-                    <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2"><img src="images/web_traffic_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Website traffic icon">SEO & Marketing</h3>
-                        <p>Boost your online presence with SEO, advertisements or social media management.</p>
-                    </div>
+        <section id="Main" class="services-overview-section" aria-labelledby="services-title">
+    <div class="container mx-auto px-4">
+        <h2 id="services-title" class="section-title">Our Core Services</h2>
+        <p class="section-intro">
+            We transform ideas into digital reality. From laying the foundation with robust hosting to engineering intelligent applications, explore how our services can elevate your business.
+        </p>
+
+        <div class="services-grid">
+
+            <!-- Web Development Card -->
+            <a href="services.html#web" class="service-card" data-animation="slide-up">
+                <div class="service-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.707 12.707l-1.414-1.414L15 16.586V4h-2v12.586l-5.293-5.293-1.414 1.414L12 19.414z"/></svg>
                 </div>
-                <div class="text-center mt-8">
-                    <a href="services.html" class="text-blue-600 hover:underline" aria-label="View all services">View All Services</a>
+                <h3 class="service-card-title">Web Development</h3>
+                <p class="service-card-description">We build more than websites; we build digital experiences. Our custom-coded solutions are tailored to your brand, ensuring a unique, responsive, and engaging presence that generic templates can't match.</p>
+                <span class="service-card-link">Learn More →</span>
+            </a>
+
+            <!-- App Development Card -->
+            <a href="services.html#app" class="service-card" data-animation="slide-up">
+                <div class="service-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/></svg>
                 </div>
-            </div>
-        </section>
+                <h3 class="service-card-title">App Development</h3>
+                <p class="service-card-description">Place your business directly in your customers' hands. We develop intuitive and powerful mobile apps for iOS and Android, creating a seamless connection that drives loyalty and engagement on the go.</p>
+                <span class="service-card-link">Learn More →</span>
+            </a>
+
+            <!-- Hosting Card -->
+            <a href="services.html#host" class="service-card" data-animation="slide-up">
+                <div class="service-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h14v-2H5v2zm-2 4h14v-2H3v2zM7 7v2h14V7H7z"/></svg>
+                </div>
+                <h3 class="service-card-title">Secure Hosting</h3>
+                <p class="service-card-description">Your website's performance starts with a solid foundation. Our hosting provides the speed, security (with free SSL), and reliability your business deserves, all managed so you can focus on growth.</p>
+                <span class="service-card-link">Learn More →</span>
+            </a>
+
+            <!-- SEO & Marketing Card -->
+            <a href="services.html#seo" class="service-card" data-animation="slide-up">
+                <div class="service-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </div>
+                <h3 class="service-card-title">SEO & Marketing</h3>
+                <p class="service-card-description">A great website is only effective if it can be found. We elevate your visibility with strategic SEO, targeted Google/Facebook ad campaigns, and data-driven insights to attract the right customers.</p>
+                <span class="service-card-link">Learn More →</span>
+            </a>
+
+            <!-- AI Integration Card -->
+            <a href="services.html#ai" class="service-card" data-animation="slide-up">
+                <div class="service-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </div>
+                <h3 class="service-card-title">AI Integration</h3>
+                <p class="service-card-description">Put your business on autopilot with a 24/7 digital employee. Our custom AI chatbots automate customer support, schedule appointments, and capture leads, freeing you to focus on high-value tasks.</p>
+                <span class="service-card-link">Learn More →</span>
+            </a>
+
+        </div>
+    </div>
+</section>
 
         
         <section aria-label="Scrolling items showcase">
-            <h2 id="item-description" class="text-3xl font-bold text-center mb-8">Website Building Skills</h2>
+            <h2 id="item-description" class="text-3xl font-bold text-center mb-8">Software Development Skills</h2>
            
             <div class="wrapper">
                 <div class="item item1" aria-hidden="true"><img src="images/WordPress-logotype-alternative.png" alt="wordpress official logo"></div>
@@ -226,23 +312,43 @@
             <div id="chatbot-messages" class="mb-4"></div>
             <div class="flex">
                 <input type="text" id="chatbot-input" class="flex-1 border rounded-l-lg p-2" placeholder="Type your message..." aria-label="Chatbot input">
-               28:12 PM 6/28/2025
+               
                 <button onclick="sendMessage()" class="bg-blue-600 text-white rounded-r-lg px-4 py-2 hover:bg-blue-700" aria-label="Send message">Send</button>
             </div>
         </div>
     </div>
     
-    
-    <footer class="bg-blue-900 text-white py-6" role="contentinfo">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Kore Web Dynamics all rights reserved </p>
-            <p>Hosting | Website | SEO | Artifical Intelligence | Mobile Applications | Software Engineer</p>
-            <p>Missouri | Springfield | Bolivar | Joplin | Branson | Kansas City | St. Louis | Clinton</p>
-            <div class="footer-links flex justify-center space-x-4 mt-4">
-                <a href="policy.html" class="footer-link" aria-label="View our Privacy Policy">Privacy Policy</a>
+    <footer class="bg-blue-900 text-white pt-10 pb-4" role="contentinfo">
+    <div class="container mx-auto px-4 text-sm">
+
+        
+        <div class="mx-auto text-center space-y-4">
+
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center flex-wrap gap-x-4 gap-y-2">
+                <a href="mailto:admin@korewebdynamics.com" class="hover:underline">admin@korewebdynamics.com</a>
+                <span class="hidden sm:inline text-gray-500">|</span>
+                <span>Call: <a href="tel:4174887069" class="hover:underline">(417) 488-7069</a></span>
+                <span class="hidden sm:inline text-gray-500">|</span>
+                <span>Text: <a href="sms:4175999612" class="hover:underline">(417) 599-9612</a></span>
             </div>
+
+            
+            <div>
+                 <p class="text-gray-300">Hosting | Website | SEO | Artificial Intelligence | Mobile Applications | Software Engineer</p>
+                 <p class="text-gray-400 mt-1">Missouri | Springfield | Bolivar | Joplin | Branson | Kansas City | St. Louis | Clinton</p>
+            </div>
+
+           
+            <div class="flex justify-center items-center flex-wrap gap-x-4">
+                <span>© 2025 Kore Web Dynamics LLC</span>
+                <span class="text-gray-500">|</span>
+                <a href="policy.html" class="hover:underline">Privacy Policy</a>
+            </div>
+
         </div>
-    </footer>
+    </div>
+</footer>
 
     <div class="social-sticky">
     <div class="follow-button" aria-label="Show social media links">Follow us</div>
